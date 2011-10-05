@@ -1,9 +1,9 @@
     <footer>
-        <a href="{{  path(site_url | default ('_welcome')) }}" title="{{ site_description | default('Your site description')  }}">
+        <a href="{{  path(site_url | default ('homepage')) }}" title="{{ site_description | default('Your site description')  }}">
          <strong>{{ site_description | default('FUNPAR')  }}</strong>
         </a> &Vert;
         &reg;{{ "now" | date('Y') }}
-        <a href="{{  path(owner_url | default ('_welcome')) }}" title="{{ owner_description | default('Site Owner')  }}">
+        <a href="{{  path(owner_url | default ('homepage')) }}" title="{{ owner_description | default('Site Owner')  }}">
           {{ owner_description | default('FunPar')  }}
         </a>
     </footer>

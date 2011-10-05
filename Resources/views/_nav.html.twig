@@ -4,7 +4,7 @@
           <h3><a href="#">{{ siteDescription | default('Bootstrap Twitter Theme') }}</a></h3>
             <ul>
               <li class="active">
-                <a href="{{ path('_welcome') }}">Home</a>
+                <a href="{{ path('homepage') }}">Home</a>
               </li>
               <li>
                 <a href="{{ path('ThemeBootstrapBundle_homepage') }}">Demo</a>
@@ -19,7 +19,7 @@
                 <a href="{{ path('ThemeBootstrapBundle_jqueryui') }}">jQuery UI</a>
               </li>
             </ul>
-            <form action="{{ path('_welcome') }}">
+            <form action="{{ path('homepage') }}">
                 <input type="text" placeholder="Search">
             </form>
             <ul class="nav secondary-nav">
