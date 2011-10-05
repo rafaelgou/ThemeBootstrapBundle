@@ -1,0 +1,29 @@
+{#
+{% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+#}
+        <div id="quicklaunch_bar" class="row" style="">
+            <div class="dyn_search span6 columns">
+                <form id="searchform" action="/person/search/action" method="get">
+                    <input type="hidden" name="quicksearchform[query]" id="quicksearchform_query" /><input type="text" name="autocomplete_quicksearchform[query]" id="autocomplete_quicksearchform_query" />
+                    <input type="hidden" name="quicksearchform[document_id]" id="quicksearchform_document_id" /><input type="hidden" name="quicksearchform[profile]" id="quicksearchform_profile" /><input type="hidden" name="quicksearchform[_csrf_token]" value="a82a7907986671e535c557402478cd61" id="quicksearchform__csrf_token" />
+                    <button type="submit" class="button_search">Pesquisar</button>
+                    <script type="text/javascript">
+                    //<![CDATA[
+                      $(function() {
+                        $("#autocomplete_quicksearchform_query").autocomplete({
+                           select: function( event, ui ) { $("#quicksearchform_query").val(ui.item.value); },source: '/person/search/action',minLength: '3',delay: '300',html: true
+                        })
+                      });
+                    //]]>
+                    </script>
+                </form>
+            </div>
+            <div id="quicklaunch_bar_actions" class="span10 columns">
+                <a href="/person/new" class="btn">empresa</a>
+                <a href="/importarfuncionario" class="btn">importar funcionário</a>
+                <a href="/importarholerite" class="btn">importar holerite</a>
+            </div>
+        </div>
+{#
+{% endif %}
+#}

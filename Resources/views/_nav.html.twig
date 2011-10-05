@@ -1,0 +1,38 @@
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h3><a href="#">{{ siteDescription | default('Bootstrap Twitter Theme') }}</a></h3>
+            <ul>
+              <li class="active">
+                <a href="{{ path('_welcome') }}">Home</a>
+              </li>
+              <li>
+                <a href="{{ path('ThemeBootstrapBundle_homepage') }}">Demo</a>
+              </li>
+              <li>
+                <a href="{{ path('ThemeBootstrapBundle_docs') }}">Bootstrap</a>
+              </li>
+              <li>
+                <a href="{{ path('ThemeBootstrapBundle_xhtmlTestPage') }}">XHTML</a>
+              </li>
+              <li>
+                <a href="{{ path('ThemeBootstrapBundle_jqueryui') }}">jQuery UI</a>
+              </li>
+            </ul>
+            <form action="{{ path('_welcome') }}">
+                <input type="text" placeholder="Search">
+            </form>
+            <ul class="nav secondary-nav">
+                <li class="menu">
+                      <a href="#" class="menu">Dropdown</a>
+                      <ul class="menu-dropdown">
+                            <li><a href="#">Secondary link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Another link</a></li>
+                      </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>

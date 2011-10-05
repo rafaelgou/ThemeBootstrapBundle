@@ -7,9 +7,28 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('ThemeBootstrapBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('ThemeBootstrapBundle:Default:index.html.twig');
+    }
+
+    public function demoAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:demo.html.twig');
+    }
+
+    public function docsAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:docs.html.twig');
+    }
+
+    public function jqueryuiAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:jqueryui.html.twig');
+    }
+
+    public function xhtmlTestPageAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:xhtmlTestPage.html.twig');
     }
 }

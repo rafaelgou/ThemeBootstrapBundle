@@ -1,3 +1,23 @@
+ThemeBootstrapBundle_elements:
+    pattern:  /elements
+    defaults: { _controller: ThemeBootstrapBundle:Default:elements }
+
+ThemeBootstrapBundle_elements:
+    pattern:  /elements
+    defaults: { _controller: ThemeBootstrapBundle:Default:elements }
+
+ThemeBootstrapBundle_docs:
+    pattern:  /docs
+    defaults: { _controller: ThemeBootstrapBundle:Default:docs }
+
+ThemeBootstrapBundle_jqueryui:
+    pattern:  /jqueryui
+    defaults: { _controller: ThemeBootstrapBundle:Default:jqueryui }
+
+ThemeBootstrapBundle_xhtmlTestPage:
+    pattern:  /xhtmlTestPage
+    defaults: { _controller: ThemeBootstrapBundle:Default:xhtmlTestPage }
+
 ThemeBootstrapBundle_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: ThemeBootstrapBundle:Default:index }

@@ -1,0 +1,62 @@
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/css/bootstrap-1.2.0.min.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/jquery_themes/bootstrap/jquery-ui.custom.min.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/css/application.default.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/css/main.css') }}" type="text/css" media="screen" />
+
+{#
+    {% stylesheets
+            '@ThemeDynamicBundle/Resources/public/screen.css'
+            '@ThemeDynamicBundle/Resources/public/jquery_themes/dynamic1/jquery-ui.custom.min.css'
+            '@ThemeDynamicBundle/Resources/public/application.gray.css'
+            filter='yui_css'
+            output='/css/*.css'
+    %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+<script type="text/javascript" src="/js/e108a9e_combined_jquery+jquery-ui_1.js"></script>
+    {% javascripts
+            '@themebootstrapBundle/Resources/public/combined_jquery+jquery-ui.js'
+            '@themebootstrapBundle/Resources/public/plugins/validate/jquery.validate.min.js'
+            '@themebootstrapBundle/Resources/public/plugins/validate/additional-methods.js'
+            '@themebootstrapBundle/Resources/public/plugins/validate/jquery.validate.pt_BR.js'
+            '@themebootstrapBundle/Resources/public/plugins/loadmask/jquery.loadmask.min.js'
+            '@themebootstrapBundle/Resources/public/plugins/treeview/jquery.treeview.js'
+            '@themebootstrapBundle/Resources/public/plugins/tooltip/jquery.tooltip.min.js'
+            '@themebootstrapBundle/Resources/public/i18n/jquery.ui.datepicker-pt-BR.js'
+            '@themebootstrapBundle/Resources/public/plugins/autocomplete-extensions/jquery.ui.autocomplete.html.js'
+            '@ThemeDynamicBundle/Resources/public/theme.js'
+            '/js/scripts.js'
+            filter='yui_js'
+            output='/js/*.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+}#
+{#
+            //'@themebootstrapBundle/Resources/public/nicEdit.js',
+            //'@themebootstrapBundle/Resources/public/',
+#}
+
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/combined_jquery+jquery-ui.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/validate/jquery.validate.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/validate/additional-methods.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/validate/jquery.validate.pt_BR.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/loadmask/jquery.loadmask.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/treeview/jquery.treeview.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/tooltip/jquery.tooltip.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/i18n/jquery.ui.datepicker-pt-BR.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/autocomplete-extensions/jquery.ui.autocomplete.html.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/plugins/tablesorter/jquery.tablesorter.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/js/theme.js') }}"></script>
+{#
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/i18n/nicEdit.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+#}
