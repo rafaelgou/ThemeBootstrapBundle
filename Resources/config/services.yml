@@ -1,0 +1,7 @@
+parameters:
+#    theme_bootstrap.example.class: Theme\BootstrapBundle\Example
+
+services:
+#    theme_bootstrap.example:
+#        class: %theme_bootstrap.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
