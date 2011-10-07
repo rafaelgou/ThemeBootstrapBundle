@@ -20,11 +20,11 @@ ThemeBootstrapBundle_xhtmlTestPage:
 
 ThemeBootstrapBundle_listGrid:
     pattern:  /listgrid
-    defaults: { _controller: ThemeBootstrapBundle:listGrid }
+    defaults: { _controller: ThemeBootstrapBundle:Default:listGrid }
 
 ThemeBootstrapBundle_listStacked:
     pattern:  /liststacked
-    defaults: { _controller: ThemeBootstrapBundle:listStacked }
+    defaults: { _controller: ThemeBootstrapBundle:Default:listStacked }
 
 ThemeBootstrapBundle_form:
     pattern:  /form

@@ -40,22 +40,22 @@ img.center-block {
     margin-top: 20px;
     margin-bottom: 0px;
     border: 1px solid #efefef;
-    background-color: whiteSmoke;    
+    background-color: whiteSmoke;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-}  
+}
 #login_form legend {
     padding:0 10px;
-}  
+}
 #login_form p {
     text-align: left;
     padding:0;
     margin:10px 0 0 0;
-}  
+}
 
 /* Quicklaunch bar  BEGIN
 -----------------------------------------------------------------------------*/
@@ -63,7 +63,7 @@ img.center-block {
     margin: 45px 0 0 0px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
-    border-radius: 6px;    
+    border-radius: 6px;
     background-color: whitesmoke;
     padding: 2px 0;
 }
@@ -144,3 +144,14 @@ div.quickstart form textarea {
 }
 /*-----------------------------------------------------------------------------
 Quickstart bar END */
+
+.pagination {
+    margin:0;
+}
+.pagination ul {
+    float: right;
+}
+
+.batch_action {
+    margin: 5px 0 ;
+}
