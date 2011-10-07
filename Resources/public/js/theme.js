@@ -264,23 +264,42 @@ $(function() {
 
 /**
  * Sets Flash Message to show
- * @param string type Type of the message
- * @param string message The message itself
- * @param int timeout Timeout to fadeOut (default 5000ms)
+ * @param string  type Type of the message
+ * @param string  message The message itself
+ * @param int     timeout Timeout to fadeOut (default 5000ms)
+ * @param boolean timeout Show close button (default false)
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-function setFlashMessage(type, message, timeout)
+function setFlashMessage(type, message, timeout, close)
 {
   if (timeout == undefined) timeout=5000;
-  $("#flash").html(message);
+  if (close   == undefined) close=false;
   $("#flash").addClass(type);
   $("#flash").show();
+  if (close) {
+      $("#flash").html(
+      '<a class="close" href="#" ' +
+      'onclick="closeWithFade(\'flash\');return false;">' +
+      '&times;</a>' +
+      message);
+  } else {
+      $("#flash").html(message);
+  }
   $(function() {
     setTimeout(function(){
     $("#flash").fadeOut("slow", function () {
       $("#flash").hide();
     });}, timeout);
   });
+}
+
+function closeWithFade(element)
+{
+  $('#'+element).fadeOut(
+    'slow',
+    function () {
+        $("#flash").hide();
+    });
 }
 
 /**

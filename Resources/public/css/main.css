@@ -145,13 +145,110 @@ div.quickstart form textarea {
 /*-----------------------------------------------------------------------------
 Quickstart bar END */
 
+
+
+/* Stacked List BEGIN
+-----------------------------------------------------------------------------*/
+.stacked_list_checkbox {
+    padding: 5px;
+    line-height: 1.0em;
+    background-color: whitesmoke;
+}
+
+.stacked_list {
+    border-bottom: 1px solid #DDD;
+    margin: 0;
+    padding: 5px 0;
+}
+.stacked_list h1,
+.stacked_list h2,
+.stacked_list h3,
+.stacked_list h4,
+.stacked_list h5,
+.stacked_list h6,
+.stacked_list p {
+    margin: 5px;
+    line-height: 1.0em;
+}
+
+.stacked_list:hover {
+    background-color: whitesmoke;
+}
+
+.stacked_list_menu {
+  width: auto;
+  list-style: none;
+  font-size:0.8em;
+  padding:0;
+  margin: 5px;
+  text-align: right;
+  float: right;
+}
+.stacked_list_menu li {
+  margin:0 5px;;
+  display: inline;
+}
+.stacked_list_menu li a {
+  font-weight: normal;
+}
+.stacked_list_menu li a:hover {
+}
+/*-----------------------------------------------------------------------------
+Stacked List END */
+
+
+/* Record Details BEGIN
+-----------------------------------------------------------------------------*/
+.details, .details_fixed {
+  font-size: 1.0em;
+  font-style: italic;
+  padding-left: 10px;
+}
+.details { display: none; color: #888;}
+.details a  { font-style: normal;}
+.details_fixed { display: block; color: transparent;}
+.details_fixed a  { color: transparent; font-style: normal;}
+.details_fixed_show { color: #888;}
+.details_fixed_show a  { color: #708ca6;}
+.details_show { display: block; }
+.details p, .details_fixed p {
+  margin: 0;
+}
+.details_actions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+.details_actions li {
+  float:left;
+  margin: 0 5px 0 0 ;
+  padding: 0;
+  width: auto;
+}
+.details_actions li span {
+  float:left;
+  position: relative;
+  margin-right: 2px;
+}
+.details_actions a {
+  margin:0;
+}
+/*-----------------------------------------------------------------------------
+Record Details END */
+
+
+
+/* Pagination and batch actions BEGIN
+-----------------------------------------------------------------------------*/
 .pagination {
-    margin:0;
+    margin:10px 0 0 0;
 }
 .pagination ul {
     float: right;
 }
-
 .batch_action {
-    margin: 5px 0 ;
+    margin: 15px 0 5px 0;
 }
+/*-----------------------------------------------------------------------------
+Pagination and batch actions END */

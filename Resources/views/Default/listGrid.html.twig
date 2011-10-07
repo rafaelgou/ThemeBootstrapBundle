@@ -5,7 +5,16 @@
 {% block content %}
 
     <div class="page-header">
-        <h1>Listing <small>or <a href="">add new</a></small></h1>
+        <h1>Listing <small>or <a href="{{ path('ThemeBootstrapBundle_form') }}">add new</a></small></h1>
+    </div>
+
+    <div id="no_records" class="alert-message warning">
+        <p>
+            {% trans %}No records found. You can filter again or{% endtrans %}
+        </p>
+        <p>
+            <a href=""><button type="submit" class="btn primary">{% trans %}Add New{% endtrans %}</button></a>
+        </p>
     </div>
 
     <div class="row">
@@ -24,7 +33,7 @@
                             <th>Birthday</th>
                             <th>Actions</th>
                         </tr>
-                    </thead>
+                   </thead>
                     <tbody>
                         <tr>
                             <td><input type="checkbox"/></td>
@@ -85,21 +94,15 @@
             <div class="row">
 
                 <div class="span5 columns batch_action">
-
                     Actions
-                    <select name="stackedSelect" id="stackedSelect" class="medium">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <select name="batchSelect" id="batchSelect" class="small">
+                        <option></option>
+                        <option>Delete</option>
                     </select>
-                    <button type="submit" class="btn primary">New</button>
-
+                    <button type="submit" class="btn primary">Add New</button>
                 </div>
 
                 <div class="span7 columns last pagination">
-
                     <ul>
                         <li class="prev disabled"><a href="#">&larr; Previous</a></li>
                         <li class="active"><a href="#">1</a></li>
@@ -109,7 +112,6 @@
                         <li><a href="#">5</a></li>
                         <li class="next"><a href="#">Next &rarr;</a></li>
                     </ul>
-
                 </div>
 
             </div>
@@ -122,56 +124,42 @@
             <form action="" class="form-stacked">
                 <fieldset>
                     <legend>Filter</legend>
+
                     <div class="clearfix">
-                    <label for="xlInput">X-Large Input</label>
-                    <div class="input">
-                    <input class="medium" id="xlInput" name="xlInput" size="30" type="text" />
-                    </div>
+                        <label for="firstname">First Name</label>
+                        <div class="input">
+                            <input class="medium" id="firstname" name="firstname" type="text" />
+                        </div>
                     </div><!-- /clearfix -->
+
                     <div class="clearfix">
-                    <label for="stackedSelect">Select</label>
-                    <div class="input">
-                    <select name="stackedSelect" id="stackedSelect">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    </select>
-                    </div>
+                        <label for="latstname">Last Name</label>
+                        <div class="input">
+                            <input class="medium" id="lastname" name="lastname" type="text" />
+                        </div>
                     </div><!-- /clearfix -->
-                </fieldset>
-                <fieldset>
-                <legend>Example form legend</legend>
-                <div class="clearfix error">
-                <label for="xlInput">X-Large Input</label>
-                <div class="input">
-                <input class="medium error" id="xlInput" name="xlInput" size="30" type="text" />
-                <span class="help-inline">Small snippet of help text</span>
-                </div>
-                </div><!-- /clearfix -->
-                <div class="clearfix">
-                <label id="optionsCheckboxes">List of Options</label>
-                <div class="input">
-                <ul class="inputs-list">
-                <li>
-                <label>
-                <input type="checkbox" name="optionsCheckboxes" value="option1" />
-                <span>Option one is this and that&mdash;be sure to include why it’s great</span>
-                </label>
-                </li>
-                <li>
-                <label>
-                <input type="checkbox" name="optionsCheckboxes" value="option2" />
-                <span>Option two can also be checked and included in form results</span>
-                </label>
-                </li>
-                </ul>
-                <span class="help-block">
-                <strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.
-                </span>
-                </div>
-                </div><!-- /clearfix -->
+
+                    <div class="clearfix">
+                        <label for="language">Language</label>
+                        <div class="input">
+                            <select name="language" id="language" class="medium">
+                                <option></option>
+                                <option>English</option>
+                                <option>Portugues</option>
+                            </select>
+                        </div>
+                    </div><!-- /clearfix -->
+
+                    <div class="clearfix">
+                        <label for="birthday">Birthday</label>
+                        <div class="input">
+                            from<br/>
+                            <input class="small date" id="birthday_to" name="birthday_to" type="text" /><br/>
+                            to<br/>
+                            <input class="small date" id="birthday_from" name="birthday_from" type="text" />
+                        </div>
+                    </div><!-- /clearfix -->
+
                 </fieldset>
                 <div class="actions">
                 <button type="submit" class="btn primary">Filter</button>&nbsp;<button type="reset" class="btn">Reset</button>
@@ -182,6 +170,5 @@
         </div>
 
     </div>
-
 
 {% endblock %}
