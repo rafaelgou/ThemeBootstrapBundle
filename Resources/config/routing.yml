@@ -18,6 +18,18 @@ ThemeBootstrapBundle_xhtmlTestPage:
     pattern:  /xhtmlTestPage
     defaults: { _controller: ThemeBootstrapBundle:Default:xhtmlTestPage }
 
+ThemeBootstrapBundle_listGrid:
+    pattern:  /listgrid
+    defaults: { _controller: ThemeBootstrapBundle:listGrid }
+
+ThemeBootstrapBundle_listStacked:
+    pattern:  /liststacked
+    defaults: { _controller: ThemeBootstrapBundle:listStacked }
+
+ThemeBootstrapBundle_form:
+    pattern:  /form
+    defaults: { _controller: ThemeBootstrapBundle:Default:form }
+
 ThemeBootstrapBundle_homepage:
     pattern:  /
     defaults: { _controller: ThemeBootstrapBundle:Default:index }

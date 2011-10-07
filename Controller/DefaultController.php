@@ -31,4 +31,20 @@ class DefaultController extends Controller
     {
         return $this->render('ThemeBootstrapBundle:Default:xhtmlTestPage.html.twig');
     }
+
+    public function formAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:form.html.twig');
+    }
+
+    public function listGridAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:listGrid.html.twig');
+    }
+
+    public function listStackedAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:listStacked.html.twig');
+    }
+
 }
