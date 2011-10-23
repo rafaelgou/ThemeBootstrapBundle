@@ -192,25 +192,25 @@ $(function() {
  * Tabs Activation
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-$(function() {
-
-  var $tabs = $('.tabs').tabs({
-    //fx: { height: 'toggle', opacity: 'toggle', duration: '10' },
-    //event: 'mouseover',
-    tabTemplate: "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' style='cursor:pointer;'>Remove Tab</span></li>",
-    add: function(event, ui) {
-      $(this).tabs('select',ui.index);
-    }
-    //,spinner: '<em style="font-size:0.9em;font-weight:normal">Retrieving data...</em>'
-  });
-
-  $('.tabs').tabs('option','spinner','<em style="font-size:0.9em;font-weight:normal">Retrieving data...</em>');
-
-  $('.tabs span.ui-icon-close').live('click', function() {
-    var index = $('li', $tabs ).index( $(this).parent() );
-    $tabs.tabs('remove', index );
-  });
-});
+//$(function() {
+//
+//  var $tabs = $('.tabs').tabs({
+//    //fx: { height: 'toggle', opacity: 'toggle', duration: '10' },
+//    //event: 'mouseover',
+//    tabTemplate: "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' style='cursor:pointer;'>Remove Tab</span></li>",
+//    add: function(event, ui) {
+//      $(this).tabs('select',ui.index);
+//    }
+//    //,spinner: '<em style="font-size:0.9em;font-weight:normal">Retrieving data...</em>'
+//  });
+//
+//  $('.tabs').tabs('option','spinner','<em style="font-size:0.9em;font-weight:normal">Retrieving data...</em>');
+//
+//  $('.tabs span.ui-icon-close').live('click', function() {
+//    var index = $('li', $tabs ).index( $(this).parent() );
+//    $tabs.tabs('remove', index );
+//  });
+//});
 
 /**
  * Resets a form by id
