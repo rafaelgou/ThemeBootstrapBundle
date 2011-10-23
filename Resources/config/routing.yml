@@ -14,6 +14,10 @@ ThemeBootstrapBundle_jqueryui:
     pattern:  /jqueryui
     defaults: { _controller: ThemeBootstrapBundle:Default:jqueryui }
 
+ThemeBootstrapBundle_javascript:
+    pattern:  /javascript
+    defaults: { _controller: ThemeBootstrapBundle:Default:javascript }
+
 ThemeBootstrapBundle_xhtmlTestPage:
     pattern:  /xhtmlTestPage
     defaults: { _controller: ThemeBootstrapBundle:Default:xhtmlTestPage }

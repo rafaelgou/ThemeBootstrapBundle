@@ -27,6 +27,11 @@ class DefaultController extends Controller
         return $this->render('ThemeBootstrapBundle:Default:jqueryui.html.twig');
     }
 
+    public function javascriptAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:javascript.html.twig');
+    }
+
     public function xhtmlTestPageAction()
     {
         return $this->render('ThemeBootstrapBundle:Default:xhtmlTestPage.html.twig');
