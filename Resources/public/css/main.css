@@ -197,6 +197,13 @@ Quickstart bar END */
 Stacked List END */
 
 
+.input p {
+    margin: 3px 0 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    padding:0;
+}
+
 /* Record Details BEGIN
 -----------------------------------------------------------------------------*/
 .details, .details_fixed {
