@@ -403,6 +403,15 @@ $(function() {
   //$('.date').datepicker($.datepicker.regional['pt-BR']);
 });
 
+/**
+ * Activates richtext editor
+ * @author Rafael Goulart <rafaelgou@gmail.com>
+ */
+$(function() {
+    $('.richtext').cleditor();
+});
+
+
 /*
  * To be used in range input dates (from -> to)
  *
