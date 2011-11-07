@@ -408,7 +408,9 @@ $(function() {
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
 $(function() {
-    $('.richtext').cleditor();
+    $('.richtext').cleditor({
+        useCSS: true
+    });
 });
 
 
