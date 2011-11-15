@@ -411,7 +411,7 @@ $(function() {
     $('.richtext').cleditor({
         useCSS: true,
         width: 700,
-        height: 350
+        height: 500
     });
 });
 
