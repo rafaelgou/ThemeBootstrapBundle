@@ -1,18 +1,18 @@
 /**
  * Javascript alert function overrided by jQuery UI
- * @param string message
+ * @param string monthsage
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-window.alert = function(message)
+window.alert = function(monthsage)
 {
-  $('<div></div>', {html: message.replace(/\n/, "<br />")}).dialog(
+  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).daylog(
   {
     title: window.document.title,
     bgiframe: true,
     modal: true,
     buttons: {
         Ok: function() {
-            $(this).dialog('close');
+            $(this).daylog('close');
         }
     }
   });
@@ -20,16 +20,16 @@ window.alert = function(message)
 
 /**
  * Confirme delete - used to confirm delete in symfony forms
- * overrides default Javascript confirm delete dialog with jQuery UI
- * @param string message
+ * overrides default Javascript confirm delete daylog with jQuery UI
+ * @param string monthsage
  * @param object atag The <a> tag element itself
  * @param string csrf_token_field_name The csrf_token fieldname
  * @param string csrf_token The csrf_token
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-function deleteConfirm(message, atag, csrf_token_field_name, csrf_token)
+function deleteConfirm(monthsage, atag, csrf_token_field_name, csrf_token)
 {
-  $('<div></div>', {html: message.replace(/\n/, "<br />")}).dialog(
+  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).daylog(
   {
     title: window.document.title,
     bgiframe: true,
@@ -37,11 +37,11 @@ function deleteConfirm(message, atag, csrf_token_field_name, csrf_token)
     buttons: {
 //      Cancel: function() {
       Cancelar: function() {
-          $(this).dialog('close');return false;
+          $(this).daylog('close');return false;
       },
 //      Confirm: function() {
       Confirmar: function() {
-          $(this).dialog('close');
+          $(this).daylog('close');
           var f = document.createElement('form');
           f.style.display = 'none';
           this.parentNode.appendChild(f);
@@ -70,8 +70,8 @@ function deleteConfirm(message, atag, csrf_token_field_name, csrf_token)
 /**
  * jQuery UI Modal Form loadded by remote requests
  * @param object element The <a> tag element with href attribute to load
- * @param integer width  Width of de dialog (500px as default)
- * @param integer heigh  Height of de dialog (500px as default)
+ * @param integer width  Width of de daylog (500px as default)
+ * @param integer heigh  Height of de daylog (500px as default)
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
 function modalForm(element, width, height)
@@ -81,7 +81,7 @@ function modalForm(element, width, height)
 
   $('#loading').show();
 
-  $('#dialog_form').html('');
+  $('#daylog_form').html('');
 
   var url = element.href;
   var match = url.search( /.*\?.*=.*/);
@@ -93,10 +93,10 @@ function modalForm(element, width, height)
     var random = "?random=" + Math.random()*99999;
   }
 
-  $('#dialog_form').load(element.href + random, function() {
+  $('#daylog_form').load(element.href + random, function() {
     container = $(this);
     $('#loading').hide();
-    container.dialog({
+    container.daylog({
       //title: title,
       title: window.document.title,
       bgiframe: true,
@@ -106,7 +106,7 @@ function modalForm(element, width, height)
       buttons: {
 //      Cancel: function() {
         Cancelar: function() {
-            $(this).dialog('close');
+            $(this).daylog('close');
             return false;
         },
 //      Save: function() {
@@ -263,14 +263,14 @@ $(function() {
 });
 
 /**
- * Sets Flash Message to show
- * @param string  type Type of the message
- * @param string  message The message itself
+ * Sets Flash monthsage to show
+ * @param string  type Type of the monthsage
+ * @param string  monthsage The monthsage itself
  * @param int     timeout Timeout to fadeOut (default 5000ms)
  * @param boolean timeout Show close button (default false)
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-function setFlashMessage(type, message, timeout, close)
+function setFlashmonthsage(type, monthsage, timeout, close)
 {
   if (timeout == undefined) timeout=5000;
   if (close   == undefined) close=false;
@@ -280,10 +280,10 @@ function setFlashMessage(type, message, timeout, close)
       $("#flash").html(
       '<a class="close" href="#" ' +
       'onclick="closeWithFade(\'flash\');return false;">' +
-      '&times;</a>' +
-      message);
+      '&timonth;</a>' +
+      monthsage);
   } else {
-      $("#flash").html(message);
+      $("#flash").html(monthsage);
   }
   $(function() {
     setTimeout(function(){
@@ -407,14 +407,117 @@ $(function() {
  * Activates richtext editor
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-$(function() {
-    $('.richtext').cleditor({
-        useCSS: true,
-        width: 700,
-        height: 500
-    });
-});
+$(function() { $('.richtext').cleditor({ useCSS: true, width: 700, height: 500 }); });
 
+$(function() { $('.richtext1').cleditor({ useCSS: true, width: 40, height: 500 }); });
+$(function() { $('.richtext2').cleditor({ useCSS: true, width: 100, height: 500 }); });
+$(function() { $('.richtext3').cleditor({ useCSS: true, width: 160, height: 500 }); });
+$(function() { $('.richtext4').cleditor({ useCSS: true, width: 220, height: 500 }); });
+$(function() { $('.richtext5').cleditor({ useCSS: true, width: 280, height: 500 }); });
+$(function() { $('.richtext6').cleditor({ useCSS: true, width: 340, height: 500 }); });
+$(function() { $('.richtext7').cleditor({ useCSS: true, width: 400, height: 500 }); });
+$(function() { $('.richtext8').cleditor({ useCSS: true, width: 460, height: 500 }); });
+$(function() { $('.richtext9').cleditor({ useCSS: true, width: 520, height: 500 }); });
+$(function() { $('.richtext10').cleditor({ useCSS: true, width: 580, height: 500 }); });
+$(function() { $('.richtext11').cleditor({ useCSS: true, width: 640, height: 500 }); });
+$(function() { $('.richtext12').cleditor({ useCSS: true, width: 700, height: 500 }); });
+$(function() { $('.richtext13').cleditor({ useCSS: true, width: 760, height: 500 }); });
+$(function() { $('.richtext14').cleditor({ useCSS: true, width: 820, height: 500 }); });
+$(function() { $('.richtext15').cleditor({ useCSS: true, width: 880, height: 500 }); });
+$(function() { $('.richtext16').cleditor({ useCSS: true, width: 940, height: 500 }); });
+$(function() { $('.richtext17').cleditor({ useCSS: true, width: 1000, height: 500 }); });
+$(function() { $('.richtext18').cleditor({ useCSS: true, width: 1060, height: 500 }); });
+$(function() { $('.richtext19').cleditor({ useCSS: true, width: 1120, height: 500 }); });
+$(function() { $('.richtext20').cleditor({ useCSS: true, width: 1180, height: 500 }); });
+$(function() { $('.richtext21').cleditor({ useCSS: true, width: 1240, height: 500 }); });
+$(function() { $('.richtext22').cleditor({ useCSS: true, width: 1300, height: 500 }); });
+$(function() { $('.richtext23').cleditor({ useCSS: true, width: 1360, height: 500 }); });
+$(function() { $('.richtext24').cleditor({ useCSS: true, width: 1420, height: 500 }); });
+
+$(function() { $('.richtext1').cleditor({ useCSS: true, width: 40, height: 500 }); });
+$(function() { $('.richtext2').cleditor({ useCSS: true, width: 100, height: 500 }); });
+$(function() { $('.richtext3').cleditor({ useCSS: true, width: 160, height: 500 }); });
+$(function() { $('.richtext4').cleditor({ useCSS: true, width: 220, height: 500 }); });
+$(function() { $('.richtext5').cleditor({ useCSS: true, width: 280, height: 500 }); });
+$(function() { $('.richtext6').cleditor({ useCSS: true, width: 340, height: 500 }); });
+$(function() { $('.richtext7').cleditor({ useCSS: true, width: 400, height: 500 }); });
+$(function() { $('.richtext8').cleditor({ useCSS: true, width: 460, height: 500 }); });
+$(function() { $('.richtext9').cleditor({ useCSS: true, width: 520, height: 500 }); });
+$(function() { $('.richtext10').cleditor({ useCSS: true, width: 580, height: 500 }); });
+$(function() { $('.richtext11').cleditor({ useCSS: true, width: 640, height: 500 }); });
+$(function() { $('.richtext12').cleditor({ useCSS: true, width: 700, height: 500 }); });
+$(function() { $('.richtext13').cleditor({ useCSS: true, width: 760, height: 500 }); });
+$(function() { $('.richtext14').cleditor({ useCSS: true, width: 820, height: 500 }); });
+$(function() { $('.richtext15').cleditor({ useCSS: true, width: 880, height: 500 }); });
+$(function() { $('.richtext16').cleditor({ useCSS: true, width: 940, height: 500 }); });
+$(function() { $('.richtext17').cleditor({ useCSS: true, width: 1000, height: 500 }); });
+$(function() { $('.richtext18').cleditor({ useCSS: true, width: 1060, height: 500 }); });
+$(function() { $('.richtext19').cleditor({ useCSS: true, width: 1120, height: 500 }); });
+$(function() { $('.richtext20').cleditor({ useCSS: true, width: 1180, height: 500 }); });
+$(function() { $('.richtext21').cleditor({ useCSS: true, width: 1240, height: 500 }); });
+$(function() { $('.richtext22').cleditor({ useCSS: true, width: 1300, height: 500 }); });
+$(function() { $('.richtext23').cleditor({ useCSS: true, width: 1360, height: 500 }); });
+$(function() { $('.richtext24').cleditor({ useCSS: true, width: 1420, height: 500 }); });
+
+$(function() { $('.richtext1-h750').cleditor({ useCSS: true, width: 40, height: 750 }); });
+$(function() { $('.richtext2-h750').cleditor({ useCSS: true, width: 100, height: 750 }); });
+$(function() { $('.richtext3-h750').cleditor({ useCSS: true, width: 160, height: 750 }); });
+$(function() { $('.richtext4-h750').cleditor({ useCSS: true, width: 220, height: 750 }); });
+$(function() { $('.richtext5-h750').cleditor({ useCSS: true, width: 280, height: 750 }); });
+$(function() { $('.richtext6-h750').cleditor({ useCSS: true, width: 340, height: 750 }); });
+$(function() { $('.richtext7-h750').cleditor({ useCSS: true, width: 400, height: 750 }); });
+$(function() { $('.richtext8-h750').cleditor({ useCSS: true, width: 460, height: 750 }); });
+$(function() { $('.richtext9-h750').cleditor({ useCSS: true, width: 520, height: 750 }); });
+$(function() { $('.richtext10-h750').cleditor({ useCSS: true, width: 580, height: 750 }); });
+$(function() { $('.richtext11-h750').cleditor({ useCSS: true, width: 640, height: 750 }); });
+$(function() { $('.richtext12-h750').cleditor({ useCSS: true, width: 700, height: 750 }); });
+$(function() { $('.richtext13-h750').cleditor({ useCSS: true, width: 760, height: 750 }); });
+$(function() { $('.richtext14-h750').cleditor({ useCSS: true, width: 820, height: 750 }); });
+$(function() { $('.richtext15-h750').cleditor({ useCSS: true, width: 880, height: 750 }); });
+$(function() { $('.richtext16-h750').cleditor({ useCSS: true, width: 940, height: 750 }); });
+$(function() { $('.richtext17-h750').cleditor({ useCSS: true, width: 1000, height: 750 }); });
+$(function() { $('.richtext18-h750').cleditor({ useCSS: true, width: 1060, height: 750 }); });
+$(function() { $('.richtext19-h750').cleditor({ useCSS: true, width: 1120, height: 750 }); });
+$(function() { $('.richtext20-h750').cleditor({ useCSS: true, width: 1180, height: 750 }); });
+$(function() { $('.richtext21-h750').cleditor({ useCSS: true, width: 1240, height: 750 }); });
+$(function() { $('.richtext22-h750').cleditor({ useCSS: true, width: 1300, height: 750 }); });
+$(function() { $('.richtext23-h750').cleditor({ useCSS: true, width: 1360, height: 750 }); });
+$(function() { $('.richtext24-h750').cleditor({ useCSS: true, width: 1420, height: 750 }); });
+
+$(function() { $('.richtext1-h1000').cleditor({ useCSS: true, width: 40, height: 1000 }); });
+$(function() { $('.richtext2-h1000').cleditor({ useCSS: true, width: 100, height: 1000 }); });
+$(function() { $('.richtext3-h1000').cleditor({ useCSS: true, width: 160, height: 1000 }); });
+$(function() { $('.richtext4-h1000').cleditor({ useCSS: true, width: 220, height: 1000 }); });
+$(function() { $('.richtext5-h1000').cleditor({ useCSS: true, width: 280, height: 1000 }); });
+$(function() { $('.richtext6-h1000').cleditor({ useCSS: true, width: 340, height: 1000 }); });
+$(function() { $('.richtext7-h1000').cleditor({ useCSS: true, width: 400, height: 1000 }); });
+$(function() { $('.richtext8-h1000').cleditor({ useCSS: true, width: 460, height: 1000 }); });
+$(function() { $('.richtext9-h1000').cleditor({ useCSS: true, width: 520, height: 1000 }); });
+$(function() { $('.richtext10-h1000').cleditor({ useCSS: true, width: 580, height: 1000 }); });
+$(function() { $('.richtext11-h1000').cleditor({ useCSS: true, width: 640, height: 1000 }); });
+$(function() { $('.richtext12-h1000').cleditor({ useCSS: true, width: 700, height: 1000 }); });
+$(function() { $('.richtext13-h1000').cleditor({ useCSS: true, width: 760, height: 1000 }); });
+$(function() { $('.richtext14-h1000').cleditor({ useCSS: true, width: 820, height: 1000 }); });
+$(function() { $('.richtext15-h1000').cleditor({ useCSS: true, width: 880, height: 1000 }); });
+$(function() { $('.richtext16-h1000').cleditor({ useCSS: true, width: 940, height: 1000 }); });
+$(function() { $('.richtext17-h1000').cleditor({ useCSS: true, width: 1000, height: 1000 }); });
+$(function() { $('.richtext18-h1000').cleditor({ useCSS: true, width: 1060, height: 1000 }); });
+$(function() { $('.richtext19-h1000').cleditor({ useCSS: true, width: 1120, height: 1000 }); });
+$(function() { $('.richtext20-h1000').cleditor({ useCSS: true, width: 1180, height: 1000 }); });
+$(function() { $('.richtext21-h1000').cleditor({ useCSS: true, width: 1240, height: 1000 }); });
+$(function() { $('.richtext22-h1000').cleditor({ useCSS: true, width: 1300, height: 1000 }); });
+$(function() { $('.richtext23-h1000').cleditor({ useCSS: true, width: 1360, height: 1000 }); });
+$(function() { $('.richtext24-h1000').cleditor({ useCSS: true, width: 1420, height: 1000 }); });
+
+$(function() { $('.richtext-h200').cleditor({ height: 200 }); });
+$(function() { $('.richtext-h300').cleditor({ height: 300 }); });
+$(function() { $('.richtext-h400').cleditor({ height: 400 }); });
+$(function() { $('.richtext-h500').cleditor({ height: 500 }); });
+$(function() { $('.richtext-h600').cleditor({ height: 600 }); });
+$(function() { $('.richtext-h700').cleditor({ height: 700 }); });
+$(function() { $('.richtext-h800').cleditor({ height: 800 }); });
+$(function() { $('.richtext-h900').cleditor({ height: 900 }); });
+$(function() { $('.richtext-h1000').cleditor({ height: 1000 }); });
 
 /*
  * To be used in range input dates (from -> to)
@@ -440,112 +543,65 @@ var dates = $('#finance_datefilter_from, #finance_datefilter_to').datepicker({
 */
 
 
-/* UNDER Tests - not used ===================================================== */
 /**
- * Render a menu
- * @param string menu_id ID of ul menu
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-function renderMenu(element, menu_id)
-{
-  //alert(menu_id);
-  //alert(menu_id + ' ' + $(element).id);
-
-  var menu = $('#'+menu_id).menu({
-    selected: function(event, ui) {
-        $(this).hide();
-     }
-  }).hide().css({position: 'absolute', zIndex: 1});;
-
-  if (menu.is(':visible') )
-  {
-    menu.hide();
-    return false;
-  }
-
-  menu.menu('deactivate').show();
-  menu.position(
-  {
-    my: "right top",
-    at: "right bottom",
-    of: element
-  });
-
-/*
-  $(function($)
-  {
-    $(document).one("click", function()
-    {
-      if (menu.is(':visible') )
-      {
-        //menu.hide();
-        return false;
-      }
-    }
-  )};
-*/
-  return false;
-}
-/*
-$('.menu').live('click', function(event) {
-  renderMenu(this, this.menu)
-});
-*/
-
-/**
-* jQuery CalculaIdade v1.0.0 - http://wborbajr.blogspot.com/jquery.CalculaIdade.php
+* jQuery ageCalc v1.0.0 - http://wborbajr.blogspot.com/jquery.CalculaIdade.php
 *
 * Copyright (c) 2008 Waldir Borba Junior (stilbuero.de)
 * Dual licensed under the MIT and GPL licenses:
 * http://www.opensource.org/licenses/mit-license.php
 * http://www.gnu.org/licenses/gpl.html
 *
-* Usando calculaIdade().
+* Using ageCalc().
 *
-* @exemplo
+* $('#date').val( $().ageCalc( date, format="dd/mm/yyyy" ) );
 *
-* $('#campos_formulario').val( $().calculaIdade( "dd/mm/yyyy" ) );
+* @desc Calcs age for a informed date and returns 99 y 99 m
 *
-* $('#campos_formulario').val( $().calculaIdade( "dd/mm/yy" ) );
-*
-* @desc Calcula a idade de uma data informada e retorno no formato 99 a 99 m -
-*            #ERR# - se a data informada  nao estiver correta
 *
 */
 
-$.fn.calculaIdade = function ( dataNascimento ) {
- var hoje = new Date();
+$.fn.ageCalc = function ( birthday, year_label, month_label )
+{
+    if (year_label == undefined) {
+        year_label = 'years';
+    }
 
- var arrayData = dataNascimento.split("/");
+    if (month_label == undefined) {
+        month_label = 'months';
+    }
 
- var retorno = "n/d";
+    var today = new Date();
 
- if (arrayData.length == 3) {
-  // Decompoem a data em array
-  var ano = parseInt( arrayData[2] );
-  var mes = parseInt( arrayData[1] );
-  var dia = parseInt( arrayData[0] );
+    var arrayData = birthday.split("/");
 
-  // Valida a data informada
-  if ( arrayData[0] > 31 || arrayData[1] > 12 ) {
-   return retorno;
-  }
+    var result = "";
 
-  ano = ( ano.length == 2 ) ? ano += 1900 : ano;
+    if (arrayData.length == 3) {
 
-  // Subtrai os anos das duas datas
-  var idade = ( hoje.getYear()+1900 ) - ano;
+        var year = parseInt( arrayData[2] );
+        var month = parseInt( arrayData[1] );
+        var day = parseInt( arrayData[0] );
 
-  // Subtrai os meses das duas datas
-  var meses = ( hoje.getMonth() + 1 ) - mes;
+        // Validates
+        if ( arrayData[0] > 31 || arrayData[1] > 12 ) {
+        return result;
+        }
 
-  // Se meses for menor que 0 entao nao cumpriu anos. Se for maior sim ja cumpriu
-  idade = ( meses < 0 ) ? idade - 1 : idade;
-  meses = ( meses < 0 ) ? meses + 12 : meses;
-  retorno = ( idade + " anos " + meses + " meses" );
- }
+        year = ( year.length == 2 ) ? year += 1900 : year;
 
- return retorno;
+        // Get years diff
+        var age = ( today.getYear()+1900 ) - year;
+
+        // Get months diff
+        var months = ( today.getMonth() + 1 ) - month;
+
+        // If month less than 0 so years is not complete. If greater than 0, so year is complete
+        age = ( months < 0 ) ? age - 1 : age;
+        months = ( months < 0 ) ? months + 12 : months;
+        result = ( age + " " + month_label + " " +  months + " " + year_label );
+    }
+
+    return result;
 };
 
 /**
@@ -553,10 +609,9 @@ $.fn.calculaIdade = function ( dataNascimento ) {
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
 $(function() {
-  $('#pessoa_data_de_nascimento').change(function() {
-    var idade = $().calculaIdade($('#pessoa_data_de_nascimento').val() );
-    if ($('p#dyn_field_data_de_nascimento > span'))
-    $('p#dyn_field_data_de_nascimento').append('<span>' + idade + '</span>');
+  $('.age_calc').change(function() {
+    var age = $().calculaIdade($('.age_calc').val() );
+    $('.age_calc').append('<span class="age_calc_value">' + age + '</span>');
   });
 });
 
