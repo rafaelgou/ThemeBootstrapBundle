@@ -434,30 +434,30 @@ $(function() { $('.richtext22').cleditor({ useCSS: true, width: 1300, height: 50
 $(function() { $('.richtext23').cleditor({ useCSS: true, width: 1360, height: 500 }); });
 $(function() { $('.richtext24').cleditor({ useCSS: true, width: 1420, height: 500 }); });
 
-$(function() { $('.richtext1').cleditor({ useCSS: true, width: 40, height: 500 }); });
-$(function() { $('.richtext2').cleditor({ useCSS: true, width: 100, height: 500 }); });
-$(function() { $('.richtext3').cleditor({ useCSS: true, width: 160, height: 500 }); });
-$(function() { $('.richtext4').cleditor({ useCSS: true, width: 220, height: 500 }); });
-$(function() { $('.richtext5').cleditor({ useCSS: true, width: 280, height: 500 }); });
-$(function() { $('.richtext6').cleditor({ useCSS: true, width: 340, height: 500 }); });
-$(function() { $('.richtext7').cleditor({ useCSS: true, width: 400, height: 500 }); });
-$(function() { $('.richtext8').cleditor({ useCSS: true, width: 460, height: 500 }); });
-$(function() { $('.richtext9').cleditor({ useCSS: true, width: 520, height: 500 }); });
-$(function() { $('.richtext10').cleditor({ useCSS: true, width: 580, height: 500 }); });
-$(function() { $('.richtext11').cleditor({ useCSS: true, width: 640, height: 500 }); });
-$(function() { $('.richtext12').cleditor({ useCSS: true, width: 700, height: 500 }); });
-$(function() { $('.richtext13').cleditor({ useCSS: true, width: 760, height: 500 }); });
-$(function() { $('.richtext14').cleditor({ useCSS: true, width: 820, height: 500 }); });
-$(function() { $('.richtext15').cleditor({ useCSS: true, width: 880, height: 500 }); });
-$(function() { $('.richtext16').cleditor({ useCSS: true, width: 940, height: 500 }); });
-$(function() { $('.richtext17').cleditor({ useCSS: true, width: 1000, height: 500 }); });
-$(function() { $('.richtext18').cleditor({ useCSS: true, width: 1060, height: 500 }); });
-$(function() { $('.richtext19').cleditor({ useCSS: true, width: 1120, height: 500 }); });
-$(function() { $('.richtext20').cleditor({ useCSS: true, width: 1180, height: 500 }); });
-$(function() { $('.richtext21').cleditor({ useCSS: true, width: 1240, height: 500 }); });
-$(function() { $('.richtext22').cleditor({ useCSS: true, width: 1300, height: 500 }); });
-$(function() { $('.richtext23').cleditor({ useCSS: true, width: 1360, height: 500 }); });
-$(function() { $('.richtext24').cleditor({ useCSS: true, width: 1420, height: 500 }); });
+$(function() { $('.richtext1-h300').cleditor({ useCSS: true, width: 40, height: 300 }); });
+$(function() { $('.richtext2-h300').cleditor({ useCSS: true, width: 100, height: 300 }); });
+$(function() { $('.richtext3-h300').cleditor({ useCSS: true, width: 160, height: 300 }); });
+$(function() { $('.richtext4-h300').cleditor({ useCSS: true, width: 220, height: 300 }); });
+$(function() { $('.richtext5-h300').cleditor({ useCSS: true, width: 280, height: 300 }); });
+$(function() { $('.richtext6-h300').cleditor({ useCSS: true, width: 340, height: 300 }); });
+$(function() { $('.richtext7-h300').cleditor({ useCSS: true, width: 400, height: 300 }); });
+$(function() { $('.richtext8-h300').cleditor({ useCSS: true, width: 460, height: 300 }); });
+$(function() { $('.richtext9-h300').cleditor({ useCSS: true, width: 520, height: 300 }); });
+$(function() { $('.richtext10-h300').cleditor({ useCSS: true, width: 580, height: 300 }); });
+$(function() { $('.richtext11-h300').cleditor({ useCSS: true, width: 640, height: 300 }); });
+$(function() { $('.richtext12-h300').cleditor({ useCSS: true, width: 700, height: 300 }); });
+$(function() { $('.richtext13-h300').cleditor({ useCSS: true, width: 760, height: 300 }); });
+$(function() { $('.richtext14-h300').cleditor({ useCSS: true, width: 820, height: 300 }); });
+$(function() { $('.richtext15-h300').cleditor({ useCSS: true, width: 880, height: 300 }); });
+$(function() { $('.richtext16-h300').cleditor({ useCSS: true, width: 940, height: 300 }); });
+$(function() { $('.richtext17-h300').cleditor({ useCSS: true, width: 1000, height: 300 }); });
+$(function() { $('.richtext18-h300').cleditor({ useCSS: true, width: 1060, height: 300 }); });
+$(function() { $('.richtext19-h300').cleditor({ useCSS: true, width: 1120, height: 300 }); });
+$(function() { $('.richtext20-h300').cleditor({ useCSS: true, width: 1180, height: 300 }); });
+$(function() { $('.richtext21-h300').cleditor({ useCSS: true, width: 1240, height: 300 }); });
+$(function() { $('.richtext22-h300').cleditor({ useCSS: true, width: 1300, height: 300 }); });
+$(function() { $('.richtext23-h300').cleditor({ useCSS: true, width: 1360, height: 300 }); });
+$(function() { $('.richtext24-h300').cleditor({ useCSS: true, width: 1420, height: 300 }); });
 
 $(function() { $('.richtext1-h750').cleditor({ useCSS: true, width: 40, height: 750 }); });
 $(function() { $('.richtext2-h750').cleditor({ useCSS: true, width: 100, height: 750 }); });
@@ -509,15 +509,6 @@ $(function() { $('.richtext22-h1000').cleditor({ useCSS: true, width: 1300, heig
 $(function() { $('.richtext23-h1000').cleditor({ useCSS: true, width: 1360, height: 1000 }); });
 $(function() { $('.richtext24-h1000').cleditor({ useCSS: true, width: 1420, height: 1000 }); });
 
-$(function() { $('.richtext-h200').cleditor({ height: 200 }); });
-$(function() { $('.richtext-h300').cleditor({ height: 300 }); });
-$(function() { $('.richtext-h400').cleditor({ height: 400 }); });
-$(function() { $('.richtext-h500').cleditor({ height: 500 }); });
-$(function() { $('.richtext-h600').cleditor({ height: 600 }); });
-$(function() { $('.richtext-h700').cleditor({ height: 700 }); });
-$(function() { $('.richtext-h800').cleditor({ height: 800 }); });
-$(function() { $('.richtext-h900').cleditor({ height: 900 }); });
-$(function() { $('.richtext-h1000').cleditor({ height: 1000 }); });
 
 /*
  * To be used in range input dates (from -> to)
