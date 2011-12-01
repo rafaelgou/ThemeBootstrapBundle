@@ -5,14 +5,14 @@
  */
 window.alert = function(monthsage)
 {
-  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).daylog(
+  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).dialog(
   {
     title: window.document.title,
     bgiframe: true,
     modal: true,
     buttons: {
         Ok: function() {
-            $(this).daylog('close');
+            $(this).dialog('close');
         }
     }
   });
@@ -20,7 +20,7 @@ window.alert = function(monthsage)
 
 /**
  * Confirme delete - used to confirm delete in symfony forms
- * overrides default Javascript confirm delete daylog with jQuery UI
+ * overrides default Javascript confirm delete dialog with jQuery UI
  * @param string monthsage
  * @param object atag The <a> tag element itself
  * @param string csrf_token_field_name The csrf_token fieldname
@@ -29,7 +29,7 @@ window.alert = function(monthsage)
  */
 function deleteConfirm(monthsage, atag, csrf_token_field_name, csrf_token)
 {
-  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).daylog(
+  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).dialog(
   {
     title: window.document.title,
     bgiframe: true,
@@ -37,11 +37,11 @@ function deleteConfirm(monthsage, atag, csrf_token_field_name, csrf_token)
     buttons: {
 //      Cancel: function() {
       Cancelar: function() {
-          $(this).daylog('close');return false;
+          $(this).dialog('close');return false;
       },
 //      Confirm: function() {
       Confirmar: function() {
-          $(this).daylog('close');
+          $(this).dialog('close');
           var f = document.createElement('form');
           f.style.display = 'none';
           this.parentNode.appendChild(f);
@@ -70,8 +70,8 @@ function deleteConfirm(monthsage, atag, csrf_token_field_name, csrf_token)
 /**
  * jQuery UI Modal Form loadded by remote requests
  * @param object element The <a> tag element with href attribute to load
- * @param integer width  Width of de daylog (500px as default)
- * @param integer heigh  Height of de daylog (500px as default)
+ * @param integer width  Width of de dialog (500px as default)
+ * @param integer heigh  Height of de dialog (500px as default)
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
 function modalForm(element, width, height)
@@ -81,7 +81,7 @@ function modalForm(element, width, height)
 
   $('#loading').show();
 
-  $('#daylog_form').html('');
+  $('#dialog_form').html('');
 
   var url = element.href;
   var match = url.search( /.*\?.*=.*/);
@@ -93,10 +93,10 @@ function modalForm(element, width, height)
     var random = "?random=" + Math.random()*99999;
   }
 
-  $('#daylog_form').load(element.href + random, function() {
+  $('#dialog_form').load(element.href + random, function() {
     container = $(this);
     $('#loading').hide();
-    container.daylog({
+    container.dialog({
       //title: title,
       title: window.document.title,
       bgiframe: true,
@@ -106,7 +106,7 @@ function modalForm(element, width, height)
       buttons: {
 //      Cancel: function() {
         Cancelar: function() {
-            $(this).daylog('close');
+            $(this).dialog('close');
             return false;
         },
 //      Save: function() {
