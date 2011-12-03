@@ -1,11 +1,11 @@
 /**
  * Javascript alert function overrided by jQuery UI
- * @param string monthsage
+ * @param string message
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-window.alert = function(monthsage)
+window.alert = function(message)
 {
-  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).dialog(
+  $('<div></div>', {html: message.replace(/\n/, "<br />")}).dialog(
   {
     title: window.document.title,
     bgiframe: true,
@@ -21,15 +21,15 @@ window.alert = function(monthsage)
 /**
  * Confirme delete - used to confirm delete in symfony forms
  * overrides default Javascript confirm delete dialog with jQuery UI
- * @param string monthsage
+ * @param string message
  * @param object atag The <a> tag element itself
  * @param string csrf_token_field_name The csrf_token fieldname
  * @param string csrf_token The csrf_token
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-function deleteConfirm(monthsage, atag, csrf_token_field_name, csrf_token)
+function deleteConfirm(message, atag, csrf_token_field_name, csrf_token)
 {
-  $('<div></div>', {html: monthsage.replace(/\n/, "<br />")}).dialog(
+  $('<div></div>', {html: message.replace(/\n/, "<br />")}).dialog(
   {
     title: window.document.title,
     bgiframe: true,
@@ -263,14 +263,14 @@ $(function() {
 });
 
 /**
- * Sets Flash monthsage to show
- * @param string  type Type of the monthsage
- * @param string  monthsage The monthsage itself
+ * Sets Flash message to show
+ * @param string  type Type of the message
+ * @param string  message The message itself
  * @param int     timeout Timeout to fadeOut (default 5000ms)
  * @param boolean timeout Show close button (default false)
  * @author Rafael Goulart <rafaelgou@gmail.com>
  */
-function setFlashmonthsage(type, monthsage, timeout, close)
+function setFlashMessage(type, message, timeout, close)
 {
   if (timeout == undefined) timeout=5000;
   if (close   == undefined) close=false;
@@ -280,10 +280,10 @@ function setFlashmonthsage(type, monthsage, timeout, close)
       $("#flash").html(
       '<a class="close" href="#" ' +
       'onclick="closeWithFade(\'flash\');return false;">' +
-      '&timonth;</a>' +
-      monthsage);
+      '&times;</a>' +
+      message);
   } else {
-      $("#flash").html(monthsage);
+      $("#flash").html(message);
   }
   $(function() {
     setTimeout(function(){
