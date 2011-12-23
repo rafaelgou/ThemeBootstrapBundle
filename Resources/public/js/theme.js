@@ -606,5 +606,11 @@ $(function() {
   });
 });
 
+
+/* Chosen */
+$(function() {
+    $(".chzn-select, .chzn-choices").chosen();
+});
+
 /* Bootstrap */
 
