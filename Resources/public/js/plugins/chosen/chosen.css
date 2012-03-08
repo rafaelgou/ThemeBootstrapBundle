@@ -138,12 +138,15 @@
 
 /* @group Multi Chosen */
 .chzn-container-multi .chzn-choices {
+  /*
   background-color: #fff;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
   background-image: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
   background-image: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
   background-image: -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
   background-image: -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  */
+  background:  #fff url('../../../images/add_16x16.png') no-repeat center right;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
   background-image: linear-gradient(top, #ffffff 85%,#eeeeee 99%);
   border: 1px solid #aaa;
@@ -341,12 +344,12 @@
 .chzn-rtl { direction:rtl;text-align: right; }
 .chzn-rtl .chzn-single { padding-left: 0; padding-right: 8px; }
 .chzn-rtl .chzn-single span { margin-left: 26px; margin-right: 0; }
-.chzn-rtl .chzn-single div { 
-  left: 0; right: auto; 
+.chzn-rtl .chzn-single div {
+  left: 0; right: auto;
   border-left: none; border-right: 1px solid #aaaaaa;
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius   : 4px 0 0 4px;
-  border-radius        : 4px 0 0 4px; 
+  border-radius        : 4px 0 0 4px;
 }
 .chzn-rtl .chzn-single abbr {
   left: 26px;
@@ -361,7 +364,7 @@
 .chzn-rtl .chzn-search input {
   background: url('chosen-sprite.png') no-repeat -38px -22px, #ffffff;
   background: url('chosen-sprite.png') no-repeat -38px -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
-  background: url('chosen-sprite.png') no-repeat -38px -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);  
+  background: url('chosen-sprite.png') no-repeat -38px -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
   background: url('chosen-sprite.png') no-repeat -38px -22px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
   background: url('chosen-sprite.png') no-repeat -38px -22px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
   background: url('chosen-sprite.png') no-repeat -38px -22px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
