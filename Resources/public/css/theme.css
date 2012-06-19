@@ -1,8 +1,11 @@
 /* Minor Base CSS adjusts BEGIN
 -----------------------------------------------------------------------------*/
-#main_container {
-    margin-top: 40px;
+body {
+  position: relative;
+  padding-top: 0px;
 }
+
+
 p {
     font-size: 14px;
     line-height: 1.8em;
@@ -38,7 +41,9 @@ Floating images END */
 /* Flash bar  BEGIN
 -----------------------------------------------------------------------------*/
 #flash {
-    margin-top: 10px;
+    position: absolute;
+    top: 50px;
+    width: auto;
 }
 /*-----------------------------------------------------------------------------
 Flash bar END */
