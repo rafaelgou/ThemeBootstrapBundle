@@ -1,26 +1,46 @@
-ThemeBootstrapBundle_elements:
-    pattern:  /elements
-    defaults: { _controller: ThemeBootstrapBundle:Default:elements }
+ThemeBootstrapBundle_overview:
+    pattern:  /
+    defaults: { _controller: ThemeBootstrapBundle:Default:overview }
 
-ThemeBootstrapBundle_elements:
-    pattern:  /elements
-    defaults: { _controller: ThemeBootstrapBundle:Default:elements }
+ThemeBootstrapBundle_scafolding:
+    pattern:  /scafolding
+    defaults: { _controller: ThemeBootstrapBundle:Default:scafolding }
 
-ThemeBootstrapBundle_docs:
-    pattern:  /docs
-    defaults: { _controller: ThemeBootstrapBundle:Default:docs }
+ThemeBootstrapBundle_basecss:
+    pattern:  /basecss
+    defaults: { _controller: ThemeBootstrapBundle:Default:basecss }
 
-ThemeBootstrapBundle_jqueryui:
-    pattern:  /jqueryui
-    defaults: { _controller: ThemeBootstrapBundle:Default:jqueryui }
+ThemeBootstrapBundle_components:
+    pattern:  /components
+    defaults: { _controller: ThemeBootstrapBundle:Default:components }
 
 ThemeBootstrapBundle_javascript:
     pattern:  /javascript
     defaults: { _controller: ThemeBootstrapBundle:Default:javascript }
 
+ThemeBootstrapBundle_less:
+    pattern:  /less
+    defaults: { _controller: ThemeBootstrapBundle:Default:less }
+
+ThemeBootstrapBundle_customize:
+    pattern:  /customize
+    defaults: { _controller: ThemeBootstrapBundle:Default:customize }
+
+ThemeBootstrapBundle_examples:
+    pattern:  /examples
+    defaults: { _controller: ThemeBootstrapBundle:Default:examples }
+
 ThemeBootstrapBundle_xhtmlTestPage:
     pattern:  /xhtmlTestPage
     defaults: { _controller: ThemeBootstrapBundle:Default:xhtmlTestPage }
+
+ThemeBootstrapBundle_jqueryuiMinimal:
+    pattern:  /jqueryuiMinimal
+    defaults: { _controller: ThemeBootstrapBundle:Default:jqueryuiMinimal }
+
+ThemeBootstrapBundle_jqueryuiFull:
+    pattern:  /jqueryuiFull
+    defaults: { _controller: ThemeBootstrapBundle:Default:jqueryuiFull }
 
 ThemeBootstrapBundle_listGrid:
     pattern:  /listgrid
@@ -30,10 +50,29 @@ ThemeBootstrapBundle_listStacked:
     pattern:  /liststacked
     defaults: { _controller: ThemeBootstrapBundle:Default:listStacked }
 
-ThemeBootstrapBundle_form:
-    pattern:  /form
-    defaults: { _controller: ThemeBootstrapBundle:Default:form }
+ThemeBootstrapBundle_examplesHero:
+    pattern:  /examples-hero
+    defaults: { _controller: ThemeBootstrapBundle:Default:examplesHero }
 
-ThemeBootstrapBundle_homepage:
-    pattern:  /
-    defaults: { _controller: ThemeBootstrapBundle:Default:index }
+ThemeBootstrapBundle_examplesFluid:
+    pattern:  /examples-fluid
+    defaults: { _controller: ThemeBootstrapBundle:Default:examplesFluid }
+
+ThemeBootstrapBundle_examplesStarter:
+    pattern:  /examples-starter
+    defaults: { _controller: ThemeBootstrapBundle:Default:examplesStarter }
+
+ThemeBootstrapBundle_jqchosen:
+    pattern:  /jqchosen
+    defaults: { _controller: ThemeBootstrapBundle:Default:jqchosen }
+
+ThemeBootstrapBundle_datatables:
+    pattern:  /datatables
+    defaults: { _controller: ThemeBootstrapBundle:Default:datatables }
+
+ThemeBootstrapBundle_cleditor:
+    pattern:  /cleditor
+    defaults: { _controller: ThemeBootstrapBundle:Default:cleditor }
+
+
+

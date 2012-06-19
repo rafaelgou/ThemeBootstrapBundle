@@ -1,0 +1,272 @@
+h2, h3 {
+    margin-top: 30px;
+}
+.topbar h3 {margin-top: 0}
+
+p {
+    font-size: 14px;
+    line-height: 1.8em;
+    text-align: justify;
+}
+
+/* hero-unit Adjusts
+-----------------------------------------------------------------------------*/
+.hero-unit {
+margin-top: 10px;
+margin-bottom: 20px;
+padding: 30px;
+}
+h1.inner {
+    font-size: 2.2em;
+}
+
+/* Floating images
+-----------------------------------------------------------------------------*/
+img.right {
+    float: right;
+    margin: 0 0 0 10px;
+}
+img.left {
+    float: left;
+    margin: 0 10px 0 0;
+}
+img.center-block {
+    margin: 20px auto;
+}
+
+/* Login Form
+*/
+#login_form fieldset {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    border: 1px solid #efefef;
+    background-color: whiteSmoke;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+#login_form legend {
+    padding:0 10px;
+}
+#login_form p {
+    text-align: left;
+    padding:0;
+    margin:10px 0 0 0;
+}
+
+/* Quicklaunch bar  BEGIN
+-----------------------------------------------------------------------------*/
+#quicklaunch_bar {
+    margin: 45px 0 0 0px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    padding: 2px 0;
+}
+#quicklaunch_bar_actions {
+  text-align: right;
+}
+#quicklaunch_bar .dyn_search {
+  background-color: transparent;
+  margin: 0;
+  text-align: left;
+  line-height: 1em;
+}
+.dyn_search form {
+    margin: 0px;
+}
+/*-----------------------------------------------------------------------------
+Quicklaunch bar END */
+
+#flash {
+    margin-top: 10px;
+}
+
+/* Quickstart bar  BEGIN
+-----------------------------------------------------------------------------*/
+div.quickstart {
+  background-color: #f5f5f5;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f5f5f5));
+  background-image: -moz-linear-gradient(#f9f9f9, #f5f5f5);
+  background-image: -ms-linear-gradient(#f9f9f9, #f5f5f5);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #f5f5f5));
+  background-image: -webkit-linear-gradient(#f9f9f9, #f5f5f5);
+  background-image: -o-linear-gradient(#f9f9f9, #f5f5f5);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f5f5f5', GradientType=0)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f5f5f5', GradientType=0);
+  background-image: linear-gradient(#f9f9f9, #f5f5f5);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #eee;
+}
+div.quickstart div.row {
+  margin: 0 -20px;
+  -webkit-box-shadow: 1px 0 0 #f9f9f9;
+     -moz-box-shadow: 1px 0 0 #f9f9f9;
+          box-shadow: 1px 0 0 #f9f9f9;
+}
+div.quickstart div.columns {
+  width: 285px;
+  height: 117px;
+  margin-left: 0;
+  padding: 17px 20px 26px;
+  border-left: 1px solid #eee;
+  -webkit-box-shadow: inset 1px 0 0 #f9f9f9;
+     -moz-box-shadow: inset 1px 0 0 #f9f9f9;
+          box-shadow: inset 1px 0 0 #f9f9f9;
+}
+div.quickstart div.columns:last-child {
+  border-right: 1px solid #eee;
+  width: 286px;
+}
+div.quickstart h6,
+div.quickstart p {
+  line-height: 18px;
+  text-align: center;
+  margin-bottom: 9px;
+  color: #333;
+}
+div.quickstart h6 {
+  color: #999;
+}
+div.quickstart form textarea {
+  display: block;
+  width: 275px;
+  height: auto;
+  margin: 0 0 9px;
+  line-height: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*-----------------------------------------------------------------------------
+Quickstart bar END */
+
+
+
+/* Stacked List BEGIN
+-----------------------------------------------------------------------------*/
+.stacked_list_checkbox {
+    padding: 5px;
+    line-height: 1.0em;
+    background-color: whitesmoke;
+}
+
+.stacked_list {
+    border-bottom: 1px solid #DDD;
+    margin: 0;
+    padding: 5px 0;
+}
+.stacked_list h1,
+.stacked_list h2,
+.stacked_list h3,
+.stacked_list h4,
+.stacked_list h5,
+.stacked_list h6,
+.stacked_list p {
+    margin: 5px;
+    line-height: 1.0em;
+}
+
+.stacked_list:hover {
+    background-color: whitesmoke;
+}
+
+.stacked_list_menu {
+  width: auto;
+  list-style: none;
+  font-size:0.8em;
+  padding:0;
+  margin: 5px;
+  text-align: right;
+  float: right;
+}
+.stacked_list_menu li {
+  margin:0 5px;;
+  display: inline;
+}
+.stacked_list_menu li a {
+  font-weight: normal;
+}
+.stacked_list_menu li a:hover {
+}
+/*-----------------------------------------------------------------------------
+Stacked List END */
+
+
+.input p {
+    margin: 3px 0 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    padding:0;
+}
+
+/* Record Details BEGIN
+-----------------------------------------------------------------------------*/
+.details, .details_fixed {
+  font-size: 1.0em;
+  font-style: italic;
+  padding-left: 10px;
+}
+.details { display: none; color: #888;}
+.details a  { font-style: normal;}
+.details_fixed { display: block; color: transparent;}
+.details_fixed a  { color: transparent; font-style: normal;}
+.details_fixed_show { color: #888;}
+.details_fixed_show a  { color: #708ca6;}
+.details_show { display: block; }
+.details p, .details_fixed p {
+  margin: 0;
+}
+.details_actions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+.details_actions li {
+  float:left;
+  margin: 0 5px 0 0 ;
+  padding: 0;
+  width: auto;
+}
+.details_actions li span {
+  float:left;
+  position: relative;
+  margin-right: 2px;
+}
+.details_actions a {
+  margin:0;
+}
+/*-----------------------------------------------------------------------------
+Record Details END */
+
+
+
+/* Pagination and batch actions BEGIN
+-----------------------------------------------------------------------------*/
+.pagination {
+    margin:10px 0 0 0;
+}
+.pagination ul {
+    float: right;
+}
+.batch_action {
+    margin: 15px 0 5px 0;
+}
+/*-----------------------------------------------------------------------------
+Pagination and batch actions END */
+
+/* Datepicker and Timepicker BEGIN
+-----------------------------------------------------------------------------*/
+input[type=date], .date {
+    width: 70px;
+}
+.datetime  {
+    width: 110px;
+}
+/*-----------------------------------------------------------------------------
+Pagination and batch actions END */

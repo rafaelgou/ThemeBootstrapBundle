@@ -1,48 +1,74 @@
-<div class="topbar" data-dropdown="dropdown">
-  <div class="topbar-inner">
-    <div class="container">
-      <h3><a href="#">{{ siteDescription | default('Bootstrap Twitter Theme') }}</a></h3>
-        <ul>
-            <li class="active">
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li>
                 <a href="{{ path('homepage') }}">Home</a>
-            </li>
-            <li>
-                <a href="{{ path('ThemeBootstrapBundle_homepage') }}">Demo</a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Samples</a>
+              </li>
+              <li class="active">
+                <a href="{{ path('ThemeBootstrapBundle_overview') }}">Overview</a>
+              </li>
+              <li class="">
+                <a href="{{ path('ThemeBootstrapBundle_scafolding') }}">Scaffolding</a>
+              </li>
+              <li class="">
+                <a href="{{ path('ThemeBootstrapBundle_basecss') }}">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="{{ path('ThemeBootstrapBundle_components') }}">Components</a>
+              </li>
+              <li class="">
+                <a href="{{ path('ThemeBootstrapBundle_javascript') }}">Javascript plugins</a>
+              </li>
+              <li class="">
+                <a href="{{ path('ThemeBootstrapBundle_less') }}">Using LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="http://twitter.github.com/bootstrap/download.html">Customize</a>
+              </li>
+              <li class="">
+                <a href="{{ path('ThemeBootstrapBundle_examples') }}">Examples</a>
+              </li>
+              <li class="dropdown">
+                <a href="#"
+                      class="dropdown-toggle"
+                      data-toggle="dropdown">
+                      Extras
+                      <b class="caret"></b>
+                </a>
                 <ul class="dropdown-menu">
-                    <li>
-                        <a href="{{ path('ThemeBootstrapBundle_docs') }}">Bootstrap</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('ThemeBootstrapBundle_javascript') }}">Javascript</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('ThemeBootstrapBundle_xhtmlTestPage') }}">XHTML</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('ThemeBootstrapBundle_jqueryui') }}">jQuery UI</a>
-                    </li>
+                  <li>
+                    <a href="{{ path('ThemeBootstrapBundle_xhtmlTestPage') }}">XHTML</a>
+                  </li>
+                  <li>
+                    <a href="{{ path('ThemeBootstrapBundle_jqueryuiFull') }}">jQuery UI Full</a>
+                  </li>
+                  <li>
+                    <a href="{{ path('ThemeBootstrapBundle_jqueryuiMinimal') }}">jQuery UI Minimal</a>
+                  </li>
+                  <li>
+                    <a href="{{ path('ThemeBootstrapBundle_jqchosen') }}">Chosen</a>
+                  </li>
+                  <li>
+                    <a href="{{ path('ThemeBootstrapBundle_datatables') }}">Datatables</a>
+                  </li>
+                  <li>
+                    <a href="{{ path('ThemeBootstrapBundle_cleditor') }}">CL Editor</a>
+                  </li>
                 </ul>
-            </li>
-        </ul>
-
-        <form action="{{ path('homepage') }}">
-            <input type="text" placeholder="Search">
-        </form>
-
-        <ul class="nav secondary-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Dropdown</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Secondary link</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Another link</a></li>
-                </ul>
-            </li>
-        </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div><!-- /topbar-inner -->

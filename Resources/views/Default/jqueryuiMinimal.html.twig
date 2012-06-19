@@ -1,0 +1,100 @@
+{% extends theme|default('ThemeBootstrapBundle::layout.html.twig') %}
+
+{% block title %}Bootstrap Twiter Theme - Sample XHTML Content{% endblock %}
+{% block add_stylesheet %}
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/css/docs.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.css') }}" type="text/css" media="screen" />
+{% endblock %}
+{% block add_javascript %}
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.js') }}"></script>
+{% endblock %}
+{% block content %}
+    <script type="text/javascript">
+    $(function(){
+        // Datepicker
+        $('#datepicker').datepicker({
+            inline: true
+        });
+        //Autocomplete
+		var availableTags = [
+			"ActionScript",
+			"AppleScript",
+			"Asp",
+			"BASIC",
+			"C",
+			"C++",
+			"Clojure",
+			"COBOL",
+			"ColdFusion",
+			"Erlang",
+			"Fortran",
+			"Groovy",
+			"Haskell",
+			"Java",
+			"JavaScript",
+			"Lisp",
+			"Perl",
+			"PHP",
+			"Python",
+			"Ruby",
+			"Scala",
+			"Scheme"
+		];
+		$( "#tags" ).autocomplete({
+			source: availableTags
+		});
+    });
+    </script>
+
+    <h1>Minimal jQuery UI</h1>
+
+    <form class="form-horizontal">
+        <fieldset>
+          <div class="page-header">
+            <h2>Datepicker and TimePicker <small>(for TimePicker the slider plugin is required)</small></h2>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="datepicker1">DatePicker opened</label>
+            <div class="controls">
+              <div id="datepicker"></div>
+              <p class="help-block">A datepicker field.</p>
+            </div>
+          </div>
+
+
+          <div class="control-group">
+            <label class="control-label" for="datepicker2">DatePicker on enter</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-calendar"></i></span><input type="date" id="datepicker2" />
+              </div>
+              <p class="help-block">A datepicker field.</p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="datetimepicker">DateTimePicker on enter</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-time"></i></span><input type="text" id="datetimepicker" class="datetime"/>
+              </div>
+              <p class="help-block">A datetimepicker field.</p>
+            </div>
+          </div>
+
+          <div class="page-header">
+            <h2>AutoComplete</h2>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="tags">Text input</label>
+            <div class="controls">
+              <input id="tags" />
+              <p class="help-block">An autocomplete field.</p>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends theme|default('ThemeBootstrapBundle::layout.html.twig') %}
+
+{% block title %}Bootstrap Twiter Theme{% endblock %}
+{% block add_stylesheet %}
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/css/docs.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.css') }}" type="text/css" media="screen" />
+{% endblock %}
+{% block add_javascript %}
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+      <h1>Bootstrap starter template</h1>
+      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+
+{% endblock %}

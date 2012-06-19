@@ -7,24 +7,40 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+//Home
+//Overview
+//Scaffolding
+//Base CSS
+//Components
+//Javascript plugins
+//Using LESS
+//Customize
+//Examples
+//XHTML
+
     public function indexAction()
     {
         return $this->render('ThemeBootstrapBundle:Default:index.html.twig');
     }
 
-    public function demoAction()
+    public function overviewAction()
     {
-        return $this->render('ThemeBootstrapBundle:Default:demo.html.twig');
+        return $this->render('ThemeBootstrapBundle:Default:overview.html.twig');
     }
 
-    public function docsAction()
+    public function scafoldingAction()
     {
-        return $this->render('ThemeBootstrapBundle:Default:docs.html.twig');
+        return $this->render('ThemeBootstrapBundle:Default:scafolding.html.twig');
     }
 
-    public function jqueryuiAction()
+    public function basecssAction()
     {
-        return $this->render('ThemeBootstrapBundle:Default:jqueryui.html.twig');
+        return $this->render('ThemeBootstrapBundle:Default:basecss.html.twig');
+    }
+
+    public function componentsAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:components.html.twig');
     }
 
     public function javascriptAction()
@@ -32,15 +48,34 @@ class DefaultController extends Controller
         return $this->render('ThemeBootstrapBundle:Default:javascript.html.twig');
     }
 
+    public function lessAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:less.html.twig');
+    }
+
+    public function examplesAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:examples.html.twig');
+    }
+
+    public function customizeAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:customize.html.twig');
+    }
+
+    public function jqueryuiFullAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:jqueryuiFull.html.twig');
+    }
+
+    public function jqueryuiMinimalAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:jqueryuiMinimal.html.twig');
+    }
+
     public function xhtmlTestPageAction()
     {
         return $this->render('ThemeBootstrapBundle:Default:xhtmlTestPage.html.twig');
-    }
-
-    public function formAction()
-    {
-        $this->setflashDemo();
-        return $this->render('ThemeBootstrapBundle:Default:form.html.twig');
     }
 
     public function listGridAction()
@@ -66,6 +101,36 @@ class DefaultController extends Controller
         $flashKeys   = array_keys($flashes);
         $flashRandom = $flashKeys[rand(0, 3)];
         $this->get('session')->setFlash($flashRandom, $flashes[$flashRandom]);
+    }
+
+    public function examplesHeroAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:examplesHero.html.twig');
+    }
+
+    public function examplesFluidAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:examplesFluid.html.twig');
+    }
+
+    public function examplesStarterAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:examplesStarter.html.twig');
+    }
+
+    public function jqchosenAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:jqchosen.html.twig');
+    }
+
+    public function datatablesAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:datatables.html.twig');
+    }
+
+    public function cleditorAction()
+    {
+        return $this->render('ThemeBootstrapBundle:Default:cleditor.html.twig');
     }
 
 }

@@ -1,7 +1,13 @@
 {% extends theme|default('ThemeBootstrapBundle::layout.html.twig') %}
 
 {% block title %}Bootstrap Twiter Theme - Sample XHTML Content{% endblock %}
-
+{% block add_stylesheet %}
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/css/docs.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.css') }}" type="text/css" media="screen" />
+{% endblock %}
+{% block add_javascript %}
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.js') }}"></script>
+{% endblock %}
 {% block content %}
 <!-- Sample Content to Plugin to Template -->
 <a name="wrapper"></a>

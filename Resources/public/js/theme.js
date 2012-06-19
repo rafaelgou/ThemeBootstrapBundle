@@ -120,78 +120,6 @@ function modalForm(element, width, height)
   });
 }
 
-/**
- * Slugfy a text element
- * @param string element The element to slugigy
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-function slugfyElement(element)
-{
-  $(element).val( slugfy($(element).val()) );
-}
-
-/**
- * Slugfy text
- * @param string text Text to slugfy
- * @param string separator The separator used to replace spaces
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-function slugfy(text, separator)
-{
-  var string = text;
-  if (separator == undefined) separator="_";
-  var remove = /\$|,|@|#|~|`|\%|\*|\^|\&|\(|\)|\+|\=|\[|\-|\]|\[|\}|\{|\;|\:|\'|\"|\<|\>|\?|\||\\|\!|\$|\./g;
-  string = string.replace(remove, "");
-  string = string.replace(" ", separator);
-  string = removeAccent(string);
-  string = string.replace(" ", separator);
-  return string.toLowerCase();
-}
-/**
- * Remove Accents
- * @param string text Text to remove accents
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-function removeAccent(text)
-{
-  var varString = text;
-  var stringAccent = new String('ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËẼÌÍÎÏĨÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëẽìíîïĩðñòóôõöøùúûüýÿ');
-  var stringNoAccent = new String('SOZsozYYuAAAAAAACEEEEEIIIIIDNOOOOOOUUUUYsaaaaaaaceeeeeiiiiionoooooouuuuyy');
-
-  var i = new Number();
-  var j = new Number();
-  var cString = new String();
-  var varRes = '';
-
-  for (i = 0; i < varString.length; i++)
-  {
-    cString = varString.substring(i, i + 1);
-    for (j = 0; j < stringAccent.length; j++)
-    {
-      if (stringAccent.substring(j, j + 1) == cString)
-      {
-        cString = stringNoAccent.substring(j, j + 1);
-      }
-    }
-    varRes += cString;
-  }
-  return varRes;
-}
-
-/**
- * Tooltips Activation
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-$(function() {
-  $('.tooltip').tooltip({
-    showURL: false
-  });
-});
-
-/**
- * Tabs Activation
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
 //$(function() {
 //
 //  var $tabs = $('.tabs').tabs({
@@ -222,45 +150,6 @@ function resetForm(id) {
     this.reset();
 	});
 }
-
-/**
- * Activates onmouseover details under <tr> tags
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-$(function() {
-  $(function() {
-    $('tr').hover(
-      function() {
-        $(this).find('.details').show();
-        $(this).find('.details_fixed').addClass('details_fixed_show');
-      },
-      function() {
-        $(this).find('.details').hide();
-        $(this).find('.details_fixed').removeClass('details_fixed_show');
-      }
-    );
-    $('.dyn_list_element').hover(
-      function() {
-        $(this).find('.details').show();
-        $(this).find('.details_fixed').addClass('details_fixed_show');
-      },
-      function() {
-        $(this).find('.details').hide();
-        $(this).find('.details_fixed').removeClass('details_fixed_show');
-      }
-    )
-    $('.has_details').hover(
-      function() {
-        $(this).find('.details').show();
-        $(this).find('.details_fixed').addClass('details_fixed_show');
-      },
-      function() {
-        $(this).find('.details').hide();
-        $(this).find('.details_fixed').removeClass('details_fixed_show');
-      }
-    )
-  });
-});
 
 /**
  * Sets Flash message to show
@@ -301,47 +190,6 @@ function closeWithFade(element)
         $("#flash").hide();
     });
 }
-
-/**
- * Define classes to be transformed to styled buttons
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-$(function() {
-  $(".button_edit").button({icons: {primary:'ui-icon-document-b'}});
-  $(".button_close").button({icons: {primary:'ui-icon-circle-close'}});
-  $(".button_cancel").button({icons: {primary:'ui-icon-cancel'}});
-  $(".button_trash").button({icons: {primary:'ui-icon-trash'}});
-  $(".button_delete").button({icons: {primary:'ui-icon-trash'}});
-  $(".button_add").button({icons: {primary:'ui-icon-add'}});
-  $(".button_check").button({icons: {primary:'ui-icon-check'}});
-  $(".button_confirm").button({icons: {primary:'ui-icon-check'}});
-  $(".button_search").button({icons: {primary:'ui-icon-search'}});
-  $(".button_calendar").button({icons: {primary:'ui-icon-calendar'}});
-  $(".button_plus").button({icons: {primary:'ui-icon-plus'}});
-  $(".button_minus").button({icons: {primary:'ui-icon-minus'}});
-  $(".button_flag").button({icons: {primary:'ui-icon-flag'}});
-  $(".button_save").button({icons: {primary:'ui-icon-circle-check'}});
-  $(".button_save_and_add").button({icons: {primary:'ui-icon-circle-arrow-e'}});
-  $(".button_list").button({icons: {primary:'ui-icon-circle-arrow-w'}});
-  $(".button_reset").button({icons: {primary:'ui-icon-cancel'}});
-  $(".button_home").button({icons: {primary:'ui-icon-home'}});
-  $(".dyn_list_pagination").buttonset();
-  $(".dyn_modeller_field_list").buttonset();
-  $(".buttonset").buttonset();
-  $(".button_switch").button({icons: {primary:'ui-icon-transferthick-e-w'}});
-  $(".pag_add_new").button({text: true, icons: {primary: "ui-icon-plus",secondary: "ui-icon-triangle-1-s"}});
-  $(".pag_add_new2").button({text: true, icons: {primary: "ui-icon-plus"}});
-  $(".pag_add_new_single").button({text: true, icons: {primary: "ui-icon-plus"}});
-  $(".pag_filter").button({text: true, icons: {primary: "ui-icon-search"}});
-  $(".pag_filter_profile").button({text: true, icons: {primary: "ui-icon-search",secondary: "ui-icon-triangle-1-s"}});
-  $(".pag_filter_profile2").button({text: true, icons: {primary: "ui-icon-search",secondary: "ui-icon-triangle-1-s"}});
-  $(".pag_first").button({text: false, icons: {primary: "ui-icon-seek-start"}});
-  $(".pag_prev").button({text: false, icons: {primary: "ui-icon-seek-prev"}});
-  $(".pag_next").button({text: false, icons: {primary: "ui-icon-seek-next"}});
-  $(".pag_last").button({text: false, icons: {primary: "ui-icon-seek-end"}});
-  $(".pag_current").button({text: true});
-  $("button").button({});
-});
 
 /**
  * Checks all checkbox with unique checkbox on pattern
@@ -394,121 +242,112 @@ $(function() {
 );
 
 /**
- * Activates datepicker
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
+* Open Ready
+*/
 $(function() {
-  $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
-  $('.date').datepicker();
-  //$('.date').datepicker($.datepicker.regional['pt-BR']);
+
+    /**
+     * Activates datepicker
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+    $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+    $('input[type=date], .date').datepicker();
+    $('.datetime').datetimepicker();
+
+    /**
+     * Activates richtext editor
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+    $('.richtext, .cleditor').cleditor({ useCSS: true });
+
+    /**
+     * Activates age calculation
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+    $('.age_calc').change(function() {
+    var age = $().calculaIdade($('.age_calc').val() );
+    $('.age_calc').append('<span class="age_calc_value">' + age + '</span>');
+    });
+
+    /**
+     * Chosen Activation
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+    $(".chzn-select, .chzn-choices, chosen").chosen();
+    $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+    /**
+     * Tooltips Activation
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+    $(function() {
+      $('.tooltip').tooltip({
+        showURL: false
+      });
+    });
+
+    /**
+     * Tabs Activation
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+    $(".tabs").tab();
+
+    /**
+     * Activates onmouseover details under <tr> tags
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+    $('tr,.has_details').hover(
+      function() {
+        $(this).find('.details').show();
+        $(this).find('.details_fixed').addClass('details_fixed_show');
+      },
+      function() {
+        $(this).find('.details').hide();
+        $(this).find('.details_fixed').removeClass('details_fixed_show');
+      }
+    );
+
+
+    /**
+     * DataTables Activate
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+	$(".dataTables").dataTable({
+        //"sDom": '<"H"frC>t<"F"ip>',
+        "sDom": "<'row'<'span4'l><'span2'C><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+        "oColVis": {
+            "buttonText": "Colunas Visíveis",
+            "bRestore": true,
+            "sRestore": "Restaurar Todas",
+            "sAlign": "right",
+            "iOverlayFade": 100,
+            "aiExclude": [ 0 ]
+        },
+		"bJQueryUI": false,
+		"bInfo": true,
+		"bLengthChange": true,
+        "sPaginationType": "bootstrap",
+        "iDisplayLength": 10,
+//		"aoColumnDefs": [
+//			{ "bSortable": false, "aTargets": [ 0 ] }
+//		],
+		"oLanguage": {
+			"sLengthMenu": "Mostrar _MENU_ por página",
+			"sZeroRecords": "Nada encontrado",
+			"sInfo": "Mostrando _START_ até _END_ de _TOTAL_ itens",
+			"sInfoEmpty": "Mostrando 0 itens",
+			"sInfoFiltered": "(de um total de _MAX_ itens)",
+			"sSearch": "Busca: ",
+			"oPaginate": {
+				"sFirst": "Primeira",
+				"sLast": "Última",
+				"sNext": "Próxima",
+				"sPrevious": "Anterior"
+			}
+		}
+	});
+    $('.ColVis_Button').addClass('btn');
+// Closing Ready
 });
-
-/**
- * Activates richtext editor
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-$(function() { $('.richtext').cleditor({ useCSS: true, width: 700, height: 500 }); });
-
-$(function() { $('.richtext1').cleditor({ useCSS: true, width: 40, height: 500 }); });
-$(function() { $('.richtext2').cleditor({ useCSS: true, width: 100, height: 500 }); });
-$(function() { $('.richtext3').cleditor({ useCSS: true, width: 160, height: 500 }); });
-$(function() { $('.richtext4').cleditor({ useCSS: true, width: 220, height: 500 }); });
-$(function() { $('.richtext5').cleditor({ useCSS: true, width: 280, height: 500 }); });
-$(function() { $('.richtext6').cleditor({ useCSS: true, width: 340, height: 500 }); });
-$(function() { $('.richtext7').cleditor({ useCSS: true, width: 400, height: 500 }); });
-$(function() { $('.richtext8').cleditor({ useCSS: true, width: 460, height: 500 }); });
-$(function() { $('.richtext9').cleditor({ useCSS: true, width: 520, height: 500 }); });
-$(function() { $('.richtext10').cleditor({ useCSS: true, width: 580, height: 500 }); });
-$(function() { $('.richtext11').cleditor({ useCSS: true, width: 640, height: 500 }); });
-$(function() { $('.richtext12').cleditor({ useCSS: true, width: 700, height: 500 }); });
-$(function() { $('.richtext13').cleditor({ useCSS: true, width: 760, height: 500 }); });
-$(function() { $('.richtext14').cleditor({ useCSS: true, width: 820, height: 500 }); });
-$(function() { $('.richtext15').cleditor({ useCSS: true, width: 880, height: 500 }); });
-$(function() { $('.richtext16').cleditor({ useCSS: true, width: 940, height: 500 }); });
-$(function() { $('.richtext17').cleditor({ useCSS: true, width: 1000, height: 500 }); });
-$(function() { $('.richtext18').cleditor({ useCSS: true, width: 1060, height: 500 }); });
-$(function() { $('.richtext19').cleditor({ useCSS: true, width: 1120, height: 500 }); });
-$(function() { $('.richtext20').cleditor({ useCSS: true, width: 1180, height: 500 }); });
-$(function() { $('.richtext21').cleditor({ useCSS: true, width: 1240, height: 500 }); });
-$(function() { $('.richtext22').cleditor({ useCSS: true, width: 1300, height: 500 }); });
-$(function() { $('.richtext23').cleditor({ useCSS: true, width: 1360, height: 500 }); });
-$(function() { $('.richtext24').cleditor({ useCSS: true, width: 1420, height: 500 }); });
-
-$(function() { $('.richtext1-h300').cleditor({ useCSS: true, width: 40, height: 300 }); });
-$(function() { $('.richtext2-h300').cleditor({ useCSS: true, width: 100, height: 300 }); });
-$(function() { $('.richtext3-h300').cleditor({ useCSS: true, width: 160, height: 300 }); });
-$(function() { $('.richtext4-h300').cleditor({ useCSS: true, width: 220, height: 300 }); });
-$(function() { $('.richtext5-h300').cleditor({ useCSS: true, width: 280, height: 300 }); });
-$(function() { $('.richtext6-h300').cleditor({ useCSS: true, width: 340, height: 300 }); });
-$(function() { $('.richtext7-h300').cleditor({ useCSS: true, width: 400, height: 300 }); });
-$(function() { $('.richtext8-h300').cleditor({ useCSS: true, width: 460, height: 300 }); });
-$(function() { $('.richtext9-h300').cleditor({ useCSS: true, width: 520, height: 300 }); });
-$(function() { $('.richtext10-h300').cleditor({ useCSS: true, width: 580, height: 300 }); });
-$(function() { $('.richtext11-h300').cleditor({ useCSS: true, width: 640, height: 300 }); });
-$(function() { $('.richtext12-h300').cleditor({ useCSS: true, width: 700, height: 300 }); });
-$(function() { $('.richtext13-h300').cleditor({ useCSS: true, width: 760, height: 300 }); });
-$(function() { $('.richtext14-h300').cleditor({ useCSS: true, width: 820, height: 300 }); });
-$(function() { $('.richtext15-h300').cleditor({ useCSS: true, width: 880, height: 300 }); });
-$(function() { $('.richtext16-h300').cleditor({ useCSS: true, width: 940, height: 300 }); });
-$(function() { $('.richtext17-h300').cleditor({ useCSS: true, width: 1000, height: 300 }); });
-$(function() { $('.richtext18-h300').cleditor({ useCSS: true, width: 1060, height: 300 }); });
-$(function() { $('.richtext19-h300').cleditor({ useCSS: true, width: 1120, height: 300 }); });
-$(function() { $('.richtext20-h300').cleditor({ useCSS: true, width: 1180, height: 300 }); });
-$(function() { $('.richtext21-h300').cleditor({ useCSS: true, width: 1240, height: 300 }); });
-$(function() { $('.richtext22-h300').cleditor({ useCSS: true, width: 1300, height: 300 }); });
-$(function() { $('.richtext23-h300').cleditor({ useCSS: true, width: 1360, height: 300 }); });
-$(function() { $('.richtext24-h300').cleditor({ useCSS: true, width: 1420, height: 300 }); });
-
-$(function() { $('.richtext1-h750').cleditor({ useCSS: true, width: 40, height: 750 }); });
-$(function() { $('.richtext2-h750').cleditor({ useCSS: true, width: 100, height: 750 }); });
-$(function() { $('.richtext3-h750').cleditor({ useCSS: true, width: 160, height: 750 }); });
-$(function() { $('.richtext4-h750').cleditor({ useCSS: true, width: 220, height: 750 }); });
-$(function() { $('.richtext5-h750').cleditor({ useCSS: true, width: 280, height: 750 }); });
-$(function() { $('.richtext6-h750').cleditor({ useCSS: true, width: 340, height: 750 }); });
-$(function() { $('.richtext7-h750').cleditor({ useCSS: true, width: 400, height: 750 }); });
-$(function() { $('.richtext8-h750').cleditor({ useCSS: true, width: 460, height: 750 }); });
-$(function() { $('.richtext9-h750').cleditor({ useCSS: true, width: 520, height: 750 }); });
-$(function() { $('.richtext10-h750').cleditor({ useCSS: true, width: 580, height: 750 }); });
-$(function() { $('.richtext11-h750').cleditor({ useCSS: true, width: 640, height: 750 }); });
-$(function() { $('.richtext12-h750').cleditor({ useCSS: true, width: 700, height: 750 }); });
-$(function() { $('.richtext13-h750').cleditor({ useCSS: true, width: 760, height: 750 }); });
-$(function() { $('.richtext14-h750').cleditor({ useCSS: true, width: 820, height: 750 }); });
-$(function() { $('.richtext15-h750').cleditor({ useCSS: true, width: 880, height: 750 }); });
-$(function() { $('.richtext16-h750').cleditor({ useCSS: true, width: 940, height: 750 }); });
-$(function() { $('.richtext17-h750').cleditor({ useCSS: true, width: 1000, height: 750 }); });
-$(function() { $('.richtext18-h750').cleditor({ useCSS: true, width: 1060, height: 750 }); });
-$(function() { $('.richtext19-h750').cleditor({ useCSS: true, width: 1120, height: 750 }); });
-$(function() { $('.richtext20-h750').cleditor({ useCSS: true, width: 1180, height: 750 }); });
-$(function() { $('.richtext21-h750').cleditor({ useCSS: true, width: 1240, height: 750 }); });
-$(function() { $('.richtext22-h750').cleditor({ useCSS: true, width: 1300, height: 750 }); });
-$(function() { $('.richtext23-h750').cleditor({ useCSS: true, width: 1360, height: 750 }); });
-$(function() { $('.richtext24-h750').cleditor({ useCSS: true, width: 1420, height: 750 }); });
-
-$(function() { $('.richtext1-h1000').cleditor({ useCSS: true, width: 40, height: 1000 }); });
-$(function() { $('.richtext2-h1000').cleditor({ useCSS: true, width: 100, height: 1000 }); });
-$(function() { $('.richtext3-h1000').cleditor({ useCSS: true, width: 160, height: 1000 }); });
-$(function() { $('.richtext4-h1000').cleditor({ useCSS: true, width: 220, height: 1000 }); });
-$(function() { $('.richtext5-h1000').cleditor({ useCSS: true, width: 280, height: 1000 }); });
-$(function() { $('.richtext6-h1000').cleditor({ useCSS: true, width: 340, height: 1000 }); });
-$(function() { $('.richtext7-h1000').cleditor({ useCSS: true, width: 400, height: 1000 }); });
-$(function() { $('.richtext8-h1000').cleditor({ useCSS: true, width: 460, height: 1000 }); });
-$(function() { $('.richtext9-h1000').cleditor({ useCSS: true, width: 520, height: 1000 }); });
-$(function() { $('.richtext10-h1000').cleditor({ useCSS: true, width: 580, height: 1000 }); });
-$(function() { $('.richtext11-h1000').cleditor({ useCSS: true, width: 640, height: 1000 }); });
-$(function() { $('.richtext12-h1000').cleditor({ useCSS: true, width: 700, height: 1000 }); });
-$(function() { $('.richtext13-h1000').cleditor({ useCSS: true, width: 760, height: 1000 }); });
-$(function() { $('.richtext14-h1000').cleditor({ useCSS: true, width: 820, height: 1000 }); });
-$(function() { $('.richtext15-h1000').cleditor({ useCSS: true, width: 880, height: 1000 }); });
-$(function() { $('.richtext16-h1000').cleditor({ useCSS: true, width: 940, height: 1000 }); });
-$(function() { $('.richtext17-h1000').cleditor({ useCSS: true, width: 1000, height: 1000 }); });
-$(function() { $('.richtext18-h1000').cleditor({ useCSS: true, width: 1060, height: 1000 }); });
-$(function() { $('.richtext19-h1000').cleditor({ useCSS: true, width: 1120, height: 1000 }); });
-$(function() { $('.richtext20-h1000').cleditor({ useCSS: true, width: 1180, height: 1000 }); });
-$(function() { $('.richtext21-h1000').cleditor({ useCSS: true, width: 1240, height: 1000 }); });
-$(function() { $('.richtext22-h1000').cleditor({ useCSS: true, width: 1300, height: 1000 }); });
-$(function() { $('.richtext23-h1000').cleditor({ useCSS: true, width: 1360, height: 1000 }); });
-$(function() { $('.richtext24-h1000').cleditor({ useCSS: true, width: 1420, height: 1000 }); });
-
 
 /*
  * To be used in range input dates (from -> to)
@@ -532,85 +371,3 @@ var dates = $('#finance_datefilter_from, #finance_datefilter_to').datepicker({
   changeYear: 'true'
 })
 */
-
-
-/**
-* jQuery ageCalc v1.0.0 - http://wborbajr.blogspot.com/jquery.CalculaIdade.php
-*
-* Copyright (c) 2008 Waldir Borba Junior (stilbuero.de)
-* Dual licensed under the MIT and GPL licenses:
-* http://www.opensource.org/licenses/mit-license.php
-* http://www.gnu.org/licenses/gpl.html
-*
-* Using ageCalc().
-*
-* $('#date').val( $().ageCalc( date, format="dd/mm/yyyy" ) );
-*
-* @desc Calcs age for a informed date and returns 99 y 99 m
-*
-*
-*/
-
-$.fn.ageCalc = function ( birthday, year_label, month_label )
-{
-    if (year_label == undefined) {
-        year_label = 'years';
-    }
-
-    if (month_label == undefined) {
-        month_label = 'months';
-    }
-
-    var today = new Date();
-
-    var arrayData = birthday.split("/");
-
-    var result = "";
-
-    if (arrayData.length == 3) {
-
-        var year = parseInt( arrayData[2] );
-        var month = parseInt( arrayData[1] );
-        var day = parseInt( arrayData[0] );
-
-        // Validates
-        if ( arrayData[0] > 31 || arrayData[1] > 12 ) {
-        return result;
-        }
-
-        year = ( year.length == 2 ) ? year += 1900 : year;
-
-        // Get years diff
-        var age = ( today.getYear()+1900 ) - year;
-
-        // Get months diff
-        var months = ( today.getMonth() + 1 ) - month;
-
-        // If month less than 0 so years is not complete. If greater than 0, so year is complete
-        age = ( months < 0 ) ? age - 1 : age;
-        months = ( months < 0 ) ? months + 12 : months;
-        result = ( age + " " + month_label + " " +  months + " " + year_label );
-    }
-
-    return result;
-};
-
-/**
- * Activates age calculation
- * @author Rafael Goulart <rafaelgou@gmail.com>
- */
-$(function() {
-  $('.age_calc').change(function() {
-    var age = $().calculaIdade($('.age_calc').val() );
-    $('.age_calc').append('<span class="age_calc_value">' + age + '</span>');
-  });
-});
-
-
-/* Chosen */
-$(function() {
-    $(".chzn-select, .chzn-choices").chosen();
-});
-
-/* Bootstrap */
-

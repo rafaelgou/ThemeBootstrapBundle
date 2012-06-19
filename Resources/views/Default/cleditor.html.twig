@@ -1,0 +1,18 @@
+{% extends theme|default('ThemeBootstrapBundle::layout.html.twig') %}
+
+{% block title %}Bootstrap Twiter Theme - Sample XHTML Content{% endblock %}
+{% block add_stylesheet %}
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/css/docs.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.css') }}" type="text/css" media="screen" />
+{% endblock %}
+{% block add_javascript %}
+        <script type="text/javascript" src="{{ asset('bundles/themebootstrap/bootstrap/js/google-code-prettify/prettify.js') }}"></script>
+{% endblock %}
+{% block content %}
+<div>
+    <h1>CL Editor</h1>
+
+    <textarea id="input" name="input" class="cleditor" data-widt="1000" data-height="500"></textarea>
+
+</div>
+{% endblock %}
