@@ -1,0 +1,162 @@
+{% extends theme|default('ThemeBootstrapBundle::layout.html.twig') %}
+
+{% block title %}Grid List - Bootstrap Twiter Theme{% endblock %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h1>Listing <small>or <a href="{{ path('ThemeBootstrapBundle_form') }}">add new</a></small></h1>
+    </div>
+
+    <div class="row">
+
+        <div id="no_records" class="alert span11">
+            <p>
+                No records found. You can filter again o
+                <a href="" class="btn primary">Add New</a>
+            </p>
+        </div>
+
+        <!-- List -->
+        <div class="row span8">
+            <form action="" method="post" class="form-inline">
+            <table class="gridDataTables table table-bordered table-striped" id="sortTableExample">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="checkall" onclick="checkAllCheckboxes(this, 'checkbox_selector_')" /></th>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Language</th>
+                        <th>Birthday</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_selector_1" name="checkbox_selector[1]"/></td>
+                        <td>1</td>
+                        <td>Your</td>
+                        <td>One</td>
+                        <td>English</td>
+                        <td>10/07/2011</td>
+                        <td>
+                            <a href="">View</a>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_selector_2" name="checkbox_selector[2]"/></td>
+                        <td>2</td>
+                        <td>Joe</td>
+                        <td>Sixpack</td>
+                        <td>English</td>
+                        <td>11/28/2008</td>
+                        <td>
+                            <a href="">View</a>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_selector_3" name="checkbox_selector[3]"/></td>
+                        <td>3</td>
+                        <td>Stu</td>
+                        <td>Dent</td>
+                        <td>Portuguese</td>
+                        <td>03/14/2003</td>
+                        <td>
+                            <a href="">View</a>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_selector_4" name="checkbox_selector[4]"/></td>
+                        <td>4</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>Portuguese</td>
+                        <td>09/01/2000</td>
+                        <td>
+                            <a href="">View</a>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="span8 columns batch_action">
+                    Actions
+                    <select name="batchSelect" id="batchSelect" class="small">
+                        <option></option>
+                        <option>Delete</option>
+                    </select>
+                    <button type="submit" class="btn">go</button>
+            </div>
+            </form>
+
+        </div>
+
+        <!-- Filter -->
+        <div class="span3 well">
+
+            <form action="" class="form-stacked">
+                <fieldset class="">
+
+                    <legend>Filter</legend>
+
+                    <div class="control-group">
+                        <label class="control-label" for="firstname">First Name</label>
+                        <div class="controls">
+                            <input class="medium" id="firstname" name="firstname" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="latstname">Last Name</label>
+                        <div class="controls">
+                            <input class="medium" id="lastname" name="lastname" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="language">Language</label>
+                        <div class="controls">
+                            <select name="language" id="language" class="medium">
+                                <option></option>
+                                <option>English</option>
+                                <option>Português</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="birthday">Birthday</label>
+                        <div class="controls">
+                            <div class="input-prepend" style="float:left;">
+                                from<br/>
+                                <span class="add-on"><i class="icon-calendar"></i></span><input type="date" id="birthday_from" />
+                            </div>
+                            <div class="input-prepend" style="float:left;margin-left: 3px;">
+                                to<br/>
+                                <span class="add-on"><i class="icon-calendar"></i></span><input type="date" id="birthday_to" />
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <button type="reset" class="btn">Reset</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock %}

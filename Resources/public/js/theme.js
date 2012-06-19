@@ -325,7 +325,78 @@ $(function() {
 			}
 		}
 	});
+
+    /**
+     * DataTables Activate
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+	$(".gridDataTables").dataTable({
+        //"sDom": '<"H"frC>t<"F"ip>',
+        "sDom": "<'row'<'span3'l><'span2'C><'span3'f>r>t<'row'<'span4'i><'span4'p>>",
+        "oColVis": {
+            "buttonText": "Colunas Visíveis",
+            "bRestore": true,
+            "sRestore": "Restaurar Todas",
+            "sAlign": "right",
+            "iOverlayFade": 100,
+            "aiExclude": [ 0 ]
+        },
+		"bJQueryUI": false,
+		"bInfo": true,
+		"bLengthChange": true,
+        "sPaginationType": "bootstrap",
+        "iDisplayLength": 10,
+//		"aoColumnDefs": [
+//			{ "bSortable": false, "aTargets": [ 0 ] }
+//		],
+		"oLanguage": {
+			"sLengthMenu": "Mostrar _MENU_ por página",
+			"sZeroRecords": "Nada encontrado",
+			"sInfo": "Mostrando _START_ até _END_ de _TOTAL_ itens",
+			"sInfoEmpty": "Mostrando 0 itens",
+			"sInfoFiltered": "(de um total de _MAX_ itens)",
+			"sSearch": "Busca: ",
+			"oPaginate": {
+				"sFirst": "Primeira",
+				"sLast": "Última",
+				"sNext": "Próxima",
+				"sPrevious": "Anterior"
+			}
+		}
+	});
+
+    /**
+     * DataTables Activate
+     * @author Rafael Goulart <rafaelgou@gmail.com>
+     */
+	$(".stackedDataTables").dataTable({
+        //"sDom": '<"H"frC>t<"F"ip>',
+        "sDom": "<'row'<'span4'l><'span4'f>r>t<'row'<'span4'i><'span4'p>>",
+		"bJQueryUI": false,
+		"bInfo": true,
+		"bLengthChange": true,
+        "sPaginationType": "bootstrap",
+        "iDisplayLength": 10,
+		"aoColumnDefs": [
+			{ "bSortable": false, "aTargets": [ 0 ] }
+		],
+		"oLanguage": {
+			"sLengthMenu": "Mostrar _MENU_ por página",
+			"sZeroRecords": "Nada encontrado",
+			"sInfo": "Mostrando _START_ até _END_ de _TOTAL_ itens",
+			"sInfoEmpty": "Mostrando 0 itens",
+			"sInfoFiltered": "(de um total de _MAX_ itens)",
+			"sSearch": "Busca: ",
+			"oPaginate": {
+				"sFirst": "Primeira",
+				"sLast": "Última",
+				"sNext": "Próxima",
+				"sPrevious": "Anterior"
+			}
+		}
+	});
     $('.ColVis_Button').addClass('btn');
+
 // Closing Ready
 });
 

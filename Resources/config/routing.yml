@@ -50,10 +50,18 @@ ThemeBootstrapBundle_listStacked:
     pattern:  /liststacked
     defaults: { _controller: ThemeBootstrapBundle:Default:listStacked }
 
+ThemeBootstrapBundle_listGridDatatables:
+    pattern:  /listgriddatatables
+    defaults: { _controller: ThemeBootstrapBundle:Default:listGridDatatables }
+
+ThemeBootstrapBundle_listStackedDatatables:
+    pattern:  /liststackeddatatables
+    defaults: { _controller: ThemeBootstrapBundle:Default:listStackedDatatables }
+
 ThemeBootstrapBundle_form:
     pattern:  /form
     defaults: { _controller: ThemeBootstrapBundle:Default:form }
-    
+
 ThemeBootstrapBundle_examplesHero:
     pattern:  /examples-hero
     defaults: { _controller: ThemeBootstrapBundle:Default:examplesHero }

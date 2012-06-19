@@ -80,6 +80,18 @@ class DefaultController extends Controller
         return $this->render('ThemeBootstrapBundle:Default:listStacked.html.twig');
     }
 
+    public function listGridDatatablesAction()
+    {
+        $this->setflashDemo();
+        return $this->render('ThemeBootstrapBundle:Default:listGridDatatables.html.twig');
+    }
+
+    public function listStackedDatatablesAction()
+    {
+        $this->setflashDemo();
+        return $this->render('ThemeBootstrapBundle:Default:listStackedDatatables.html.twig');
+    }
+
     protected function setflashDemo()
     {
         $flashes = array(
