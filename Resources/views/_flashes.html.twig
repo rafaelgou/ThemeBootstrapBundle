@@ -1,7 +1,7 @@
 {% set types = ['notice','error','success','info'] %}
 {% for type in types %}
     {% if app.session.hasFlash(type) %}
-<div id="flash" style="display:none;" class="alert-message"></div>
+<div id="flash" style="display:none;" class="alert"></div>
 <script type="text/javascript" >
 //<![CDATA[
     setFlashMessage('{{ type }}', '{{ app.session.flash(type) | trans }}', 10000, true);

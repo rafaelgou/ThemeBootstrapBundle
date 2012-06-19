@@ -7,16 +7,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-//Home
-//Overview
-//Scaffolding
-//Base CSS
-//Components
-//Javascript plugins
-//Using LESS
-//Customize
-//Examples
-//XHTML
 
     public function indexAction()
     {
@@ -93,7 +83,7 @@ class DefaultController extends Controller
     protected function setflashDemo()
     {
         $flashes = array(
-            'notice'  => 'Maybe you could be in trouble, but yet. You\'re warned.',
+            'notice'  => 'Maybe you could be in trouble, but not yet. You\'re warned.',
             'error'   => 'Something really bad happens',
             'success' => 'Well done! Everything seems to be all right',
             'info'    => 'Just an information for you, stay cool and pay atention',
@@ -101,6 +91,12 @@ class DefaultController extends Controller
         $flashKeys   = array_keys($flashes);
         $flashRandom = $flashKeys[rand(0, 3)];
         $this->get('session')->setFlash($flashRandom, $flashes[$flashRandom]);
+    }
+
+    public function formAction()
+    {
+        $this->setflashDemo();
+        return $this->render('ThemeBootstrapBundle:Default:form.html.twig');
     }
 
     public function examplesHeroAction()

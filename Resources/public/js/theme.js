@@ -120,26 +120,6 @@ function modalForm(element, width, height)
   });
 }
 
-//$(function() {
-//
-//  var $tabs = $('.tabs').tabs({
-//    //fx: { height: 'toggle', opacity: 'toggle', duration: '10' },
-//    //event: 'mouseover',
-//    tabTemplate: "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' style='cursor:pointer;'>Remove Tab</span></li>",
-//    add: function(event, ui) {
-//      $(this).tabs('select',ui.index);
-//    }
-//    //,spinner: '<em style="font-size:0.9em;font-weight:normal">Retrieving data...</em>'
-//  });
-//
-//  $('.tabs').tabs('option','spinner','<em style="font-size:0.9em;font-weight:normal">Retrieving data...</em>');
-//
-//  $('.tabs span.ui-icon-close').live('click', function() {
-//    var index = $('li', $tabs ).index( $(this).parent() );
-//    $tabs.tabs('remove', index );
-//  });
-//});
-
 /**
  * Resets a form by id
  * @param string id The form id
@@ -163,7 +143,7 @@ function setFlashMessage(type, message, timeout, close)
 {
   if (timeout == undefined) timeout=5000;
   if (close   == undefined) close=false;
-  $("#flash").addClass(type);
+  $("#flash").addClass('alert-'+type);
   $("#flash").show();
   if (close) {
       $("#flash").html(
@@ -206,15 +186,9 @@ function closeWithFade(element)
 function checkAllCheckboxes(element, id_base_pattern, exceptions)
 {
    $("input[id^=" + id_base_pattern + "][type='checkbox']:not([disabled='disabled'])").attr('checked',$(element).is(':checked'));
-   //if ( exceptions != 'undefined')
-   //{
-   //  for(i=0;i<exceptions.length;i++)
-   //  {
-   //    $('#'+exceptions[i]).attr('checked', 'true');
-   //  }
-   //}
 }
-
+/**
+TODO Find a way to uncheck
 $(function() {
   //clicking the parent checkbox should check or uncheck all child checkboxes
   $(".parentCheckBox").click(
@@ -240,6 +214,8 @@ $(function() {
   );
   }
 );
+*/
+
 
 /**
 * Open Ready
@@ -258,7 +234,11 @@ $(function() {
      * Activates richtext editor
      * @author Rafael Goulart <rafaelgou@gmail.com>
      */
-    $('.richtext, .cleditor').cleditor({ useCSS: true });
+    $('.richtext, .cleditor').cleditor({
+        useCSS: true,
+        height:"100%",
+        width: "90%"
+    });
 
     /**
      * Activates age calculation
@@ -273,7 +253,7 @@ $(function() {
      * Chosen Activation
      * @author Rafael Goulart <rafaelgou@gmail.com>
      */
-    $(".chzn-select, .chzn-choices, chosen").chosen();
+    $(".chzn-select, .chzn-choices, .chosen").chosen();
     $(".chzn-select-deselect").chosen({allow_single_deselect:true});
     /**
      * Tooltips Activation

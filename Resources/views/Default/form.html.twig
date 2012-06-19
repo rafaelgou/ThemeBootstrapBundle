@@ -7,202 +7,119 @@
         <h1>New or Editing <small></h1>
     </div>
 
-    <div class="span16 columns">
-        <form>
+    <div class="span12 columns">
+<form class="form-horizontal">
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="input01">Text input</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckbox">Checkbox</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                Option one is this and that—be sure to include why it's great
+              </label>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="select01">Select list</label>
+            <div class="controls">
+              <select id="select01">
+                <option>something</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="multiSelect">Multicon-select</label>
+            <div class="controls">
+              <select multiple="multiple" id="multiSelect">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="select03">Select list Chosen</label>
+            <div class="controls">
+              <select id="select03" class="chosen">
+                <option>something</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="multiSelect2">Multicon-select Chosen</label>
+            <div class="controls">
+              <select multiple="multiple" id="multiSelect2" class="chosen">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
 
-            <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="datepicker">DatePicker</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-calendar"></i></span><input type="date" id="datepicker" />
+              </div>
+            </div>
+          </div>
 
-                <legend>Example form legend</legend>
+          <div class="control-group">
+            <label class="control-label" for="datetimepicker">DateTimePicker</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-time"></i></span><input type="text" id="datetimepicker" class="datetime"/>
+              </div>
+            </div>
+          </div>
 
-                <div class="clearfix">
-                    <label for="xlInput">X-Large Input</label>
-                    <div class="input">
-                        <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text" />
-                    </div>
-                </div><!-- /clearfix -->
+          <div class="control-group">
+            <label class="control-label" for="fileInput">File input</label>
+            <div class="controls">
+              <input class="input-file" id="fileInput" type="file">
+            </div>
+          </div>
 
-                <div class="clearfix">
-                    <label for="normalSelect">Select</label>
-                    <div class="input">
-                        <select name="normalSelect" id="normalSelect">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                    </select>
-                    </div>
-                </div><!-- /clearfix -->
+          <div class="control-group">
+            <label class="control-label" for="textarea">Textarea</label>
+            <div class="controls">
+              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+            </div>
+          </div>
 
-                <div class="clearfix">
-                    <label for="mediumSelect">Select</label>
-                    <div class="input">
-                        <select class="medium" name="mediumSelect" id="mediumSelect">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                </div><!-- /clearfix -->
+          <div class="control-group">
+            <label class="control-label" for="richtext">Richtext</label>
+            <div class="controls">
+              <textarea class="input-xlarge richtext" id="richtext"></textarea>
+            </div>
+          </div>
 
-                <div class="clearfix">
-                    <label>Uneditable Input</label>
-                    <div class="input">
-                        <span class="uneditable-input">Some Value Here</span>
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix">
-                    <label for="disabledInput">Disabled Input</label>
-                    <div class="input">
-                        <input class="xlarge disabled" id="disabledInput" name="disabledInput" size="30" type="text" placeholder="Disabled input here… carry on." disabled />
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix error">
-                    <label for="xlInput">X-Large Input</label>
-                    <div class="input">
-                    <input class="xlarge error" id="xlInput" name="xlInput" size="30" type="text" />
-                        <span class="help-inline">Small snippet of help text</span>
-                    </div>
-                </div><!-- /clearfix -->
-
-            </fieldset>
-
-            <fieldset>
-
-                <legend>Example form legend</legend>
-
-                <div class="clearfix">
-                    <label for="prependedInput">Prepended Text</label>
-                    <div class="input">
-                        <div class="input-prepend">
-                            <span class="add-on">@</span>
-                            <input class="medium" id="prependedInput" name="prependedInput" size="16" type="text" />
-                        </div>
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix">
-                    <label for="prependedInput2">Prepended Checkbox</label>
-                    <div class="input">
-                        <div class="input-prepend">
-                            <label class="add-on"><input type="checkbox" name="" id="" value="" /></label>
-                            <input class="mini" id="prependedInput2" name="prependedInput2" size="16" type="text" />
-                        </div>
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix">
-                    <label for="appendedInput">Appended Checkbox</label>
-                    <div class="input">
-                        <div class="input-append">
-                            <input class="mini" id="appendedInput" name="appendedInput" size="16" type="text" />
-                            <label class="add-on active"><input type="checkbox" name="" id="" value="" checked="checked" /></label>
-                        </div>
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix">
-                    <label for="xlInput">File Input</label>
-                    <div class="input">
-                        <input class="input-file" id="fileInput" name="fileInput" type="file" />
-                    </div>
-                </div><!-- /clearfix -->
-
-            </fieldset>
-
-            <fieldset>
-
-                <legend>Example form legend</legend>
-
-                <div class="clearfix">
-                    <label id="optionsCheckboxes">List of Options</label>
-                    <div class="input">
-                        <ul class="inputs-list">
-                            <li>
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes" value="option1" />
-                                    <span>Option one is this and that&mdash;be sure to include why it’s great</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes" value="option2" />
-                                    <span>Option two can also be checked and included in form results</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes" value="option2" />
-                                    <span>Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form results</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="disabled">
-                                    <input type="checkbox" name="optionsCheckboxes" value="option2" disabled />
-                                    <span>Option four cannot be checked as it is disabled.</span>
-                                </label>
-                            </li>
-                        </ul>
-                        <span class="help-block">
-                            <strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.
-                        </span>
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix">
-                    <label>Date Range</label>
-                    <div class="input">
-                        <div class="inline-inputs">
-                            <input class="small date" type="date" value="05/01/2011" />
-                            <input class="mini" type="time" value="12:00" />
-                            to
-                            <input class="small date" type="date" value="05/08/2011" />
-                            <input class="mini" type="time" value="11:59" />
-                            <span class="help-inline">All times are shown as Pacific Standard Time (GMT -08:00).</span>
-                        </div>
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix">
-                    <label for="textarea">Textarea</label>
-                    <div class="input">
-                        <textarea class="xxlarge" id="textarea" name="textarea"></textarea>
-                        <span class="help-block">
-                        Block of help text to describe the field above if need be.
-                        </span>
-                    </div>
-                </div><!-- /clearfix -->
-
-                <div class="clearfix">
-                    <label id="optionsRadio">List of Options</label>
-                    <div class="input">
-                        <ul class="inputs-list">
-                            <li>
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes" value="option1" />
-                                    <span>Option one is this and that&mdash;be sure to include why it’s great</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes" value="option2" />
-                                    <span>Option two can also be checked and included in form results</span>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div><!-- /clearfix -->
-                <div class="actions">
-                    <button type="submit" class="btn primary">Save</button>&nbsp;
-                    <button type="submit" class="btn primary">Save and Add</button>&nbsp;
-                    <button type="reset" class="btn">Cancel</button>
-                </div>
-            </fieldset>
-        </form>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button class="btn">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
 
 {% endblock %}

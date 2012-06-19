@@ -3,11 +3,11 @@
 
     <head>
         <title>{% block title %}{% endblock %}Demo Site</title>
-        
+
 {% include 'ThemeBootstrapBundle::_head.html.twig' %}
 {% block add_stylesheet %}{% endblock %}
 {% block add_javascript %}{% endblock %}
-        
+
     </head>
 
   <body>
@@ -16,7 +16,7 @@
 
 {% include 'ThemeBootstrapBundle::_nav.html.twig' %}
 
-    <div class="container{% if fluid is defined %}-fluid{% endif %}">
+    <div id="main_container" class="container{% if fluid is defined %}-fluid{% endif %}">
 {% include "ThemeBootstrapBundle::_header.html.twig" %}
 
 {% block content %}{% endblock %}
@@ -26,6 +26,6 @@
     </div>
 
     <div id="dialog_form"></div>
-    
+
   </body>
 </html>

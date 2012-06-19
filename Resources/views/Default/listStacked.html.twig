@@ -8,25 +8,22 @@
         <h1>Listing <small>or <a href="{{ path('ThemeBootstrapBundle_form') }}">add new</a></small></h1>
     </div>
 
-    <div id="no_records" class="alert-message warning">
-        <p>
-            {% trans %}No records found. You can filter again or{% endtrans %}
-        </p>
-        <p>
-            <a href=""><button type="submit" class="btn primary">{% trans %}Add New{% endtrans %}</button></a>
-        </p>
-    </div>
-
     <div class="row">
 
-        <!-- List -->
-        <div class="span12 columns">
+        <div id="no_records" class="alert span11">
+            <p>
+                No records found. You can filter again o
+                <a href="" class="btn primary">Add New</a>
+            </p>
+        </div>
 
+        <!-- List -->
+        <div class="row span8">
             <div class="stacked_list_checkbox">
-                <input type="checkbox" id="checkall"/> Select All
+                <input type="checkbox" id="checkall" onclick="checkAllCheckboxes(this, 'checkbox_selector_')" /> Select All
             </div>
-            
-            <div>
+
+            <div class="stacked_list_container">
 
                 <div class="stacked_list has_details">
                     <ul class="stacked_list_menu details_fixed">
@@ -34,7 +31,7 @@
                         <li><a href="">Edit</a></li>
                         <li><a href="">Delete</a></li>
                     </ul>
-                    <h3><input type="checkbox"/> Your One</h3>
+                    <h3><input type="checkbox" id="checkbox_selector_1" name="checkbox_selector[1]"/> Your One</h3>
                     <p class="details_fixed">
                         speaks <strong>English</strong>, borned in <strong>10/07/2011</strong>
                     </p>
@@ -46,7 +43,7 @@
                         <li><a href="">Edit</a></li>
                         <li><a href="">Delete</a></li>
                     </ul>
-                    <h3><input type="checkbox"/> Joe Sixpack</h3>
+                    <h3><input type="checkbox" id="checkbox_selector_2" name="checkbox_selector[2]"/> Joe Sixpack</h3>
                     <p class="details_fixed">
                         speaks <strong>English</strong>, borned in <strong>11/28/2008</strong>
                     </p>
@@ -58,7 +55,7 @@
                         <li><a href="">Edit</a></li>
                         <li><a href="">Delete</a></li>
                     </ul>
-                    <h3><input type="checkbox"/> Stu Dent</h3>
+                    <h3><input type="checkbox" id="checkbox_selector_3" name="checkbox_selector[3]"/> Stu Dent</h3>
                     <p class="details_fixed">
                         speaks <strong>Portuguese</strong>, borned in <strong>03/14/2003</strong>
                     </p>
@@ -70,90 +67,91 @@
                         <li><a href="">Edit</a></li>
                         <li><a href="">Delete</a></li>
                     </ul>
-                    <h3><input type="checkbox"/> John Doe</h3>
+                    <h3><input type="checkbox" id="checkbox_selector_4" name="checkbox_selector[4]"/> John Doe</h3>
                     <p class="details_fixed">
                         speaks <strong>Portuguese</strong>, borned in <strong>09/01/2000</strong>
                     </p>
                 </div>
             </div>
 
-            <div class="row">
-
-                <div class="span5 columns batch_action">
+            <div class="span4 columns batch_action">
+                <form action="" method="post">
                     Actions
                     <select name="batchSelect" id="batchSelect" class="small">
                         <option></option>
                         <option>Delete</option>
                     </select>
-                    <button type="submit" class="btn primary">Add New</button>
-                </div>
-
-                <div class="span7 columns last pagination">
-
-                    <ul>
-                        <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li class="next"><a href="#">Next &rarr;</a></li>
-                    </ul>
-
-                </div>
-
+                    <button type="submit">go</button>
+                </form>
             </div>
 
+            <div class="span4 columns last pagination">
+                <ul>
+                    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="next"><a href="#">Next &rarr;</a></li>
+                </ul>
+            </div>
         </div>
 
         <!-- Filter -->
-        <div class="span4 columns">
+        <div class="span3 well">
 
             <form action="" class="form-stacked">
-                <fieldset>
+                <fieldset class="">
+
                     <legend>Filter</legend>
 
-                    <div class="clearfix">
-                        <label for="firstname">First Name</label>
-                        <div class="input">
+                    <div class="control-group">
+                        <label class="control-label" for="firstname">First Name</label>
+                        <div class="controls">
                             <input class="medium" id="firstname" name="firstname" type="text" />
                         </div>
-                    </div><!-- /clearfix -->
+                    </div>
 
-                    <div class="clearfix">
-                        <label for="latstname">Last Name</label>
-                        <div class="input">
+                    <div class="control-group">
+                        <label class="control-label" for="latstname">Last Name</label>
+                        <div class="controls">
                             <input class="medium" id="lastname" name="lastname" type="text" />
                         </div>
-                    </div><!-- /clearfix -->
+                    </div>
 
-                    <div class="clearfix">
-                        <label for="language">Language</label>
-                        <div class="input">
+                    <div class="control-group">
+                        <label class="control-label" for="language">Language</label>
+                        <div class="controls">
                             <select name="language" id="language" class="medium">
                                 <option></option>
                                 <option>English</option>
-                                <option>Portugues</option>
+                                <option>Português</option>
                             </select>
                         </div>
-                    </div><!-- /clearfix -->
+                    </div>
 
-                    <div class="clearfix">
-                        <label for="birthday">Birthday</label>
-                        <div class="input">
-                            from<br/>
-                            <input class="small date" id="birthday_to" name="birthday_to" type="text" /><br/>
-                            to<br/>
-                            <input class="small date" id="birthday_from" name="birthday_from" type="text" />
+                    <div class="control-group">
+                        <label class="control-label" for="birthday">Birthday</label>
+                        <div class="controls">
+                            <div class="input-prepend" style="float:left;">
+                                from<br/>
+                                <span class="add-on"><i class="icon-calendar"></i></span><input type="date" id="birthday_from" />
+                            </div>
+                            <div class="input-prepend" style="float:left;margin-left: 3px;">
+                                to<br/>
+                                <span class="add-on"><i class="icon-calendar"></i></span><input type="date" id="birthday_to" />
+                            </div>
                         </div>
-                    </div><!-- /clearfix -->
+                    </div>
 
                 </fieldset>
-                <div class="actions">
-                <button type="submit" class="btn primary">Filter</button>&nbsp;<button type="reset" class="btn">Reset</button>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <button type="reset" class="btn">Reset</button>
                 </div>
             </form>
-
 
         </div>
 
