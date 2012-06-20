@@ -5,17 +5,7 @@
  */
 window.alert = function(message)
 {
-  $('<div></div>', {html: message.replace(/\n/, "<br />")}).dialog(
-  {
-    title: window.document.title,
-    bgiframe: true,
-    modal: true,
-    buttons: {
-        Ok: function() {
-            $(this).dialog('close');
-        }
-    }
-  });
+    bootbox.alert(message.replace(/\n/, "<br />"));
 };
 
 /**
@@ -29,22 +19,11 @@ window.alert = function(message)
  */
 function deleteConfirm(message, atag, csrf_token_field_name, csrf_token)
 {
-  $('<div></div>', {html: message.replace(/\n/, "<br />")}).dialog(
-  {
-    title: window.document.title,
-    bgiframe: true,
-    modal: true,
-    buttons: {
-//      Cancel: function() {
-      Cancelar: function() {
-          $(this).dialog('close');return false;
-      },
-//      Confirm: function() {
-      Confirmar: function() {
-          $(this).dialog('close');
+    bootbox.confirm(message, "Cancelar", "Confirmar", function(confirmed) {
+        if (confirmed == true) {
           var f = document.createElement('form');
           f.style.display = 'none';
-          this.parentNode.appendChild(f);
+          $('body').after(f);
           f.method = 'post';
           f.action = atag.href;
           var m = document.createElement('input');
@@ -62,9 +41,12 @@ function deleteConfirm(message, atag, csrf_token_field_name, csrf_token)
             f.submit();
             return false;
           }
-      }
-    }
-  });
+          return true;
+        } else {
+            return false;
+        }
+    });
+    return false;
 }
 
 /**
@@ -378,7 +360,7 @@ $(function() {
         "sPaginationType": "bootstrap",
         "iDisplayLength": 10,
 		"aoColumnDefs": [
-			{ "bSortable": false, "aTargets": [ 0 ] }
+			{"bSortable": false, "aTargets": [ 0 ]}
 		],
 		"oLanguage": {
 			"sLengthMenu": "Mostrar _MENU_ por página",

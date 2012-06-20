@@ -95,6 +95,13 @@ Flash bar END */
 }
 .stacked_list_menu li a:hover {
 }
+
+input[name^=checkbox_selector], input[name^=selected_objects] {
+    float: left;
+    margin: 5px 10px 20px 5px;
+    padding-top: 5px;
+}
+
 /*-----------------------------------------------------------------------------
 Stacked List END */
 
