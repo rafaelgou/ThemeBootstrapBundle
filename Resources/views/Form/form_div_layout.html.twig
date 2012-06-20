@@ -1,4 +1,7 @@
-{# Widgets #}
+{#
+    Widgets for Bootstrap2
+    @see http://iambot.net/symfony2-form-theme-for-bootstrap.html
+#}
 
 {% block form_widget %}
 {% spaceless %}
@@ -198,7 +201,7 @@
     {% if required %}
         {% set attr = attr|merge({'class': attr.class|default('') ~ ' required'}) %}
     {% endif %}
-    <label{% for attrname,attrvalue in attr %} {{attrname}}="{{attrvalue}}"{% endfor %}>{{ label|trans }}</label>
+    <label class="control-label" {% for attrname,attrvalue in attr %} {{attrname}}="{{attrvalue}}"{% endfor %}>{{ label|trans }}</label>
 {% endspaceless %}
 {% endblock %}
 
@@ -225,10 +228,18 @@
 
 {% block field_row %}
 {% spaceless %}
-    <div>
+  {% if macro is not defined %}
+      {% import 'ThemeBootstrapBundle:Form:macro.html.twig' as macro %}
+  {% endif %}
+    <div class="control-group {{ macro.hasErrors(form) }}">
         {{ form_label(form, label|default(null)) }}
-        {{ form_errors(form) }}
-        {{ form_widget(form) }}
+        <div class="controls">
+            {{ form_widget(form) }}
+            {{ form_errors(form) }}
+            {% if attr.title | default(null) %}
+            <p class="help-block">{{ attr.title }}</p>
+            {% endif %}
+        </div>
     </div>
 {% endspaceless %}
 {% endblock field_row %}
@@ -245,15 +256,14 @@
 {% endspaceless %}
 {% endblock field_enctype %}
 
+
 {% block field_errors %}
 {% spaceless %}
-    {% if errors|length > 0 %}
-    <ul>
-        {% for error in errors %}
-            <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+  {% if errors is defined and errors|length > 0 %}
+    {% for error in errors %}
+      <span class="help-inline error">{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</span>
+    {% endfor %}
+  {% endif %}
 {% endspaceless %}
 {% endblock field_errors %}
 
@@ -271,7 +281,6 @@
 
 {% block field_rows %}
 {% spaceless %}
-    {{ form_errors(form) }}
     {% for child in form %}
         {{ form_row(child) }}
     {% endfor %}
