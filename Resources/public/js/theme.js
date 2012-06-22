@@ -314,7 +314,7 @@ $(function() {
      */
 	$(".gridDataTables").dataTable({
         //"sDom": '<"H"frC>t<"F"ip>',
-        "sDom": "<'row'<'span3'l><'span2'C><'span3'f>r>t<'row'<'span4'i><'span4'p>>",
+        "sDom": "<'row'<'span3'l><'span2'C><'span4'f>r>t<'row'<'span4'i><'span5'p>>",
         "oColVis": {
             "buttonText": "Colunas Visíveis",
             "bRestore": true,
@@ -353,7 +353,7 @@ $(function() {
      */
 	$(".stackedDataTables").dataTable({
         //"sDom": '<"H"frC>t<"F"ip>',
-        "sDom": "<'row'<'span4'l><'span4'f>r>t<'row'<'span4'i><'span4'p>>",
+        "sDom": "<'row'<'span4'l><'span5'f>r>t<'row'<'span4'i><'span5'p>>",
 		"bJQueryUI": false,
 		"bInfo": true,
 		"bLengthChange": true,

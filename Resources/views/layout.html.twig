@@ -26,17 +26,18 @@
 {% include 'ThemeBootstrapBundle::_nav.html.twig' %}
 
     <div id="main_container" class="container">
-
+        <div class="span12">
         <header>
 {% include 'ThemeBootstrapBundle::_flashes.html.twig' %}
         </header>
 
 {% block content %}{% endblock %}
 
+        </div>
+
 {% include "ThemeBootstrapBundle::_footer.html.twig" %}
 
     </div>
-
     <div id="dialog_form"></div>
 
   </body>

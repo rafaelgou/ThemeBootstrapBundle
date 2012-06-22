@@ -43,6 +43,7 @@ Floating images END */
 #flash {
     position: absolute;
     top: 50px;
+    right: 50px;
     width: auto;
 }
 /*-----------------------------------------------------------------------------
@@ -95,10 +96,15 @@ Flash bar END */
 }
 .stacked_list_menu li a:hover {
 }
-
-input[name^=checkbox_selector], input[name^=selected_objects] {
+.stacked_list_checkbox {
+    padding: 5px;
+}
+.stacked_list_checkbox input {
+    margin: -5px 5px 0 0 ;
+}
+.stacked_list input[name^=selected_objects] {
     float: left;
-    margin: 5px 10px 20px 5px;
+    margin: 5px 5px 20px 5px;
     padding-top: 5px;
 }
 
@@ -145,17 +151,22 @@ Stacked List END */
 /*-----------------------------------------------------------------------------
 Record Details END */
 
-/* Pagination and batch actions BEGIN
+/* Pagination, batch actions, list_filter BEGIN
 -----------------------------------------------------------------------------*/
 .pagination {
-    margin:10px 0 0 0;
+    float: right;
+    margin-top: 10px;
 }
 .pagination ul {
     float: right;
 }
 .batch_action {
-    margin: 15px 0 5px 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+.list_filter {
+    margin-top: -19px;
+
 /*-----------------------------------------------------------------------------
 Pagination and batch actions END */
 
