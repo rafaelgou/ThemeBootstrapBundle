@@ -1,10 +1,10 @@
 /* Minor Base CSS adjusts BEGIN
 -----------------------------------------------------------------------------*/
-body {
-  position: relative;
-  padding-top: 40px;
+@media (min-width: 768px) {
+    body {
+        padding-top: 55px;
+    }
 }
-
 
 p {
     font-size: 14px;
@@ -41,9 +41,6 @@ Floating images END */
 /* Flash bar  BEGIN
 -----------------------------------------------------------------------------*/
 #flash {
-    position: absolute;
-    top: 50px;
-    right: 50px;
     width: auto;
 }
 /*-----------------------------------------------------------------------------
